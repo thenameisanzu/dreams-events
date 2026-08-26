@@ -1,5 +1,5 @@
 .page {
-  background: #0A0A0C;
+  background: var(--background);
   color: var(--text-primary);
   min-height: 100vh;
 }

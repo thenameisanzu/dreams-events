@@ -1,6 +1,6 @@
 .footer {
-  background: #060608;
-  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  background: var(--background);
+  border-top: 1px solid var(--card-border);
   padding: 5rem 2rem 2rem;
   position: relative;
   overflow: hidden;
@@ -84,8 +84,8 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: var(--input-bg);
+  border: 1px solid var(--card-border);
   color: var(--text-secondary);
   transition: var(--transition-smooth);
 }
