@@ -165,13 +165,13 @@
   font-family: var(--font-outfit), sans-serif;
   font-size: 1.35rem;
   font-weight: 700;
-  color: var(--text-primary);
+  color: #ffffff;
   margin-bottom: 0.5rem;
 }
 
 .cardDesc {
   font-size: 0.85rem;
-  color: var(--text-secondary);
+  color: rgba(255, 255, 255, 0.7);
   opacity: 0;
   height: 0;
   overflow: hidden;
@@ -204,7 +204,7 @@
   right: 2rem;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  color: var(--text-primary);
+  color: #ffffff;
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -268,13 +268,13 @@
   font-family: var(--font-outfit), sans-serif;
   font-size: clamp(1.75rem, 3vw, 2.25rem);
   font-weight: 800;
-  color: var(--text-primary);
+  color: #ffffff;
   margin-bottom: 1.5rem;
   line-height: 1.2;
 }
 
 .lightboxDesc {
-  color: var(--text-secondary);
+  color: rgba(255, 255, 255, 0.7);
   line-height: 1.7;
   margin-bottom: 2rem;
   font-size: 1rem;
@@ -296,13 +296,13 @@
 .metaLabel {
   font-family: var(--font-outfit), sans-serif;
   font-weight: 700;
-  color: var(--text-primary);
+  color: #ffffff;
   width: 90px;
   flex-shrink: 0;
 }
 
 .metaValue {
-  color: var(--text-secondary);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 /* Responsiveness */
