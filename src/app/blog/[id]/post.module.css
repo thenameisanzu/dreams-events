@@ -1,0 +1,126 @@
+.page {
+  background: #0A0A0C;
+  color: var(--text-primary);
+  min-height: 100vh;
+}
+
+.article {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 10rem 2rem 8rem;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 3rem;
+  transition: var(--transition-smooth);
+}
+
+.backLink:hover {
+  color: var(--primary);
+  transform: translateX(-4px);
+}
+
+.header {
+  margin-bottom: 3rem;
+}
+
+.tag {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--primary);
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.title {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.metaItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.metaIcon {
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.imageWrapper {
+  position: relative;
+  aspect-ratio: 16/9;
+  width: 100%;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  margin-bottom: 3.5rem;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.body {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+.body p {
+  margin-bottom: 2rem;
+  color: var(--text-secondary);
+}
+
+.body h2 {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 3rem 0 1.25rem;
+  color: var(--text-primary);
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .article {
+    padding: 8rem 1.5rem 6rem;
+  }
+  .backLink {
+    margin-bottom: 2rem;
+  }
+  .meta {
+    gap: 1rem 1.5rem;
+  }
+  .imageWrapper {
+    margin-bottom: 2.5rem;
+  }
+  .body {
+    font-size: 1.02rem;
+  }
+}

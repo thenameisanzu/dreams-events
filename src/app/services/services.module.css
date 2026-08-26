@@ -1,0 +1,203 @@
+.page {
+  background: #0A0A0C;
+  color: var(--text-primary);
+  min-height: 100vh;
+}
+
+.hero {
+  position: relative;
+  padding: 10rem 2rem 5rem;
+  background: linear-gradient(180deg, rgba(139, 92, 246, 0.05) 0%, transparent 100%);
+  text-align: center;
+  overflow: hidden;
+}
+
+.heroContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.badge {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--primary);
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.title {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+}
+
+.titleAccent {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent-pink) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  font-size: 1.15rem;
+  line-height: 1.6;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem 8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+}
+
+.serviceBlock {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 5rem;
+  align-items: center;
+  scroll-margin-top: 100px;
+}
+
+.serviceBlockReverse {
+  grid-template-columns: 1.1fr 1fr;
+}
+
+.serviceBlockReverse .imageWrapper {
+  grid-column: 2;
+}
+
+.serviceBlockReverse .textWrapper {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.imageWrapper {
+  position: relative;
+  aspect-ratio: 16/10;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.serviceImage {
+  object-fit: cover;
+  transition: var(--transition-slow);
+}
+
+.serviceBlock:hover .serviceImage {
+  transform: scale(1.03);
+}
+
+.textWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.serviceHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.serviceTitle {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 1.25rem;
+}
+
+.serviceDesc {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  font-size: 1.02rem;
+}
+
+.featuresList {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.featureIcon {
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.ctaBtn {
+  align-self: flex-start;
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.9rem 2rem;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text-primary);
+  border: 1px solid var(--glass-border);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.ctaBtn:hover {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+  box-shadow: 0 5px 15px rgba(139, 92, 246, 0.35);
+  transform: translateY(-2px);
+}
+
+/* Responsiveness */
+@media (max-width: 992px) {
+  .serviceBlock {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .serviceBlockReverse {
+    grid-template-columns: 1fr;
+  }
+  .serviceBlockReverse .imageWrapper {
+    grid-column: 1;
+  }
+  .serviceBlockReverse .textWrapper {
+    grid-column: 1;
+  }
+  .imageWrapper {
+    aspect-ratio: 16/9;
+  }
+  .featuresList {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 8rem 1.5rem 4rem;
+  }
+  .content {
+    padding: 2rem 1.5rem 6rem;
+    gap: 6rem;
+  }
+}
