@@ -30,10 +30,10 @@ const milestones = [
 
 const teamMembers = [
   {
-    initials: 'RM',
-    name: 'Rohan Mathew',
-    role: 'Co-Founder & CEO',
-    bio: 'Oversees vendor operations, logistics timelines, and contract matrices across Kerala. Ensures the back-end runs as beautifully as the front-end.'
+    initials: 'TM',
+    name: 'Tony Mathew',
+    role: 'Founder & Managing Director',
+    bio: 'The driving force behind Dreams Event management & Decorations. Tony started the venture with a vision to redefine event production in Kerala, combining artistic styling with strict operational logistics.'
   },
   {
     initials: 'AN',
