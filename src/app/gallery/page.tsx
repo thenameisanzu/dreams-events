@@ -56,7 +56,7 @@ export default function GalleryPage() {
       <section className={styles.hero}>
         <div className={styles.heroContainer}>
           <h1 className={styles.title}>
-            Our Gallery & <span className={styles.titleAccent}>Recent Works</span>
+            Our <span className={styles.titleAccent}>Gallery</span>
           </h1>
           <p className={styles.subtitle}>
             Explore photos of our live event rigging, custom stage decorations, and curated luxury styling across Kerala.
