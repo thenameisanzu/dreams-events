@@ -6,16 +6,7 @@ export interface GalleryItem {
   aspectRatio: 'vertical' | 'horizontal' | 'square';
 }
 
-export interface RecentWork {
-  id: string;
-  title: string;
-  category: string;
-  venue: string;
-  date: string;
-  desc: string;
-  image: string;
-  highlights: string[];
-}
+
 
 export const galleryItems: GalleryItem[] = [
   {
@@ -76,35 +67,3 @@ export const galleryItems: GalleryItem[] = [
   }
 ];
 
-export const recentWorks: RecentWork[] = [
-  {
-    id: 'rw1',
-    title: 'Royal Destination Wedding at Kumarakom Lake Resort',
-    category: 'Weddings',
-    venue: 'Kumarakom, Kottayam',
-    date: 'August 2026',
-    desc: 'An exquisite lakefront wedding featuring a floating fresh-flower mandap, customized canopy drapes, and a glass-base walkway above the water.',
-    image: '/hero-bg.jpg',
-    highlights: ['Floating Water Stage', '3,000+ Fresh Floral Chains', 'Integrated Warm LED Uplighting']
-  },
-  {
-    id: 'rw2',
-    title: 'Mega Concert Stage at Jawaharlal Nehru Stadium',
-    category: 'Concerts',
-    venue: 'Kaloor, Kochi',
-    date: 'July 2026',
-    desc: 'Full-scale arena stage production with heavy-duty structural trusses, advanced line array acoustics, synchronized pyro effects, and safe zone barricading.',
-    image: '/concert.jpg',
-    highlights: ['20-Ton Rigging Trusses', '360° Sound Acoustics', '100% Crowd Control Design']
-  },
-  {
-    id: 'rw3',
-    title: 'Annual Tech Summit at Infopark Kakkanad',
-    category: 'Corporate',
-    venue: 'Kakkanad, Kochi',
-    date: 'June 2026',
-    desc: 'High-end corporate seminar setup utilizing widescreen curved LED displays, presentation nodes, lapel mic systems, and digital check-in counters.',
-    image: '/corporate.jpg',
-    highlights: ['Curved LED Wall backdrop', 'RFID Check-In Terminals', 'VIP Lounge Design & Staff']
-  }
-];

@@ -3,10 +3,10 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Maximize2, X, ChevronLeft, ChevronRight, MapPin, Calendar, CheckCircle } from 'lucide-react';
+import { Maximize2, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { galleryItems, recentWorks } from '@/data/galleryData';
+import { galleryItems } from '@/data/galleryData';
 import styles from './gallery.module.css';
 
 const categories = ['All', 'Weddings', 'Birthdays', 'Corporate', 'Concerts', 'Decorations'];
@@ -119,64 +119,6 @@ export default function GalleryPage() {
         </motion.div>
       </section>
 
-      {/* Recent Works Showcase Section */}
-      <section className={styles.recentSection}>
-        <div className={styles.recentContainer}>
-          <div className={styles.sectionHeader}>
-            <h2 className={styles.recentTitle}>
-              Featured Case Studies & <span className={styles.titleAccent}>Recent Works</span>
-            </h2>
-            <p className={styles.recentSubtitle}>
-              A detailed look at the coordination, logistics, and visual execution of our milestone events.
-            </p>
-          </div>
-
-          <div className={styles.recentList}>
-            {recentWorks.map((work) => (
-              <div key={work.id} className={styles.recentCard}>
-                <div className={styles.recentImgArea}>
-                  <Image
-                    src={work.image}
-                    alt={work.title}
-                    fill
-                    sizes="(max-width: 992px) 100vw, 50vw"
-                    className={styles.recentImg}
-                  />
-                </div>
-                <div className={styles.recentDetails}>
-                  <div className={styles.recentMeta}>
-                    <span className={styles.recentCategory}>{work.category}</span>
-                    <div className={styles.metaItem}>
-                      <MapPin size={14} />
-                      <span>{work.venue}</span>
-                    </div>
-                    <div className={styles.metaItem}>
-                      <Calendar size={14} />
-                      <span>{work.date}</span>
-                    </div>
-                  </div>
-                  <h3 className={work.title.length > 50 ? styles.recentCardTitleLong : styles.recentCardTitle}>
-                    {work.title}
-                  </h3>
-                  <p className={styles.recentDesc}>{work.desc}</p>
-                  
-                  <div className={styles.highlights}>
-                    <h4 className={styles.highlightsTitle}>Key Deliverables</h4>
-                    <ul className={styles.highlightsList}>
-                      {work.highlights.map((h, i) => (
-                        <li key={i} className={styles.highlightItem}>
-                          <CheckCircle size={14} className={styles.checkIcon} />
-                          <span>{h}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Lightbox Modal */}
       <AnimatePresence>
