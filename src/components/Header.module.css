@@ -36,6 +36,36 @@
   letter-spacing: -0.03em;
 }
 
+.logoTextWrapper {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+  text-align: left;
+}
+
+.logoTitle {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.logoSub {
+  font-family: var(--font-jakarta), sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 480px) {
+  .logoSub {
+    display: none;
+  }
+}
+
 .logoImage {
   border-radius: 50%;
   border: 1px solid rgba(255, 255, 255, 0.08);

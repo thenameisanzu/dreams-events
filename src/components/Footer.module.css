@@ -36,6 +36,30 @@
   box-shadow: 0 0 10px rgba(139, 92, 246, 0.15);
 }
 
+.logoTextWrapper {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+  text-align: left;
+}
+
+.logoTitle {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.logoSub {
+  font-family: var(--font-jakarta), sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
 .logoSparkle {
   color: var(--primary);
   filter: drop-shadow(0 0 8px var(--primary));

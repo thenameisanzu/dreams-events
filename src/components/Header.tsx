@@ -59,7 +59,10 @@ export default function Header() {
               height={40}
               className={styles.logoImage}
             />
-            <span>Dreams</span>
+            <div className={styles.logoTextWrapper}>
+              <span className={styles.logoTitle}>Dreams</span>
+              <span className={styles.logoSub}>Event management & Decorations</span>
+            </div>
           </Link>
 
           {/* Desktop Nav */}

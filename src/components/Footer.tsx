@@ -19,7 +19,10 @@ export default function Footer() {
               height={40}
               className={styles.logoImage}
             />
-            <span>Dreams</span>
+            <div className={styles.logoTextWrapper}>
+              <span className={styles.logoTitle}>Dreams</span>
+              <span className={styles.logoSub}>Event management & Decorations</span>
+            </div>
           </div>
           <p className={styles.desc}>
             Crafting spectacular experiences, luxury designs, and seamless logistics. Dreams Event management & Decorations handles everything from corporate retreats to luxury weddings.
