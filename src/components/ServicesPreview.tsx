@@ -2,56 +2,26 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Heart, Briefcase, Music, Palette, ChevronRight } from 'lucide-react';
+import { ChevronRight } from 'lucide-react';
+import { servicesData } from '@/data/servicesData';
 import styles from './ServicesPreview.module.css';
-
-const services = [
-  {
-    title: 'Luxury Weddings',
-    desc: 'From fairy-tale set designs to seamless coordination, we curate weddings that tell your unique love story with sheer elegance and grandeur.',
-    icon: Heart,
-    color: '#EC4899', // Pink
-    link: '/services#weddings',
-  },
-  {
-    title: 'Corporate Events',
-    desc: 'Impactful conferences, product launches, gala dinners, and exhibitions managed with immaculate precision and state-of-the-art logistics.',
-    icon: Briefcase,
-    color: '#10B981', // Emerald
-    link: '/services#corporate',
-  },
-  {
-    title: 'Concerts & Festivals',
-    desc: 'Mega musical concerts, cultural festivals, and community celebrations built with professional acoustics, lighting layouts, and crowd control.',
-    icon: Music,
-    color: '#8B5CF6', // Purple
-    link: '/services#concerts',
-  },
-  {
-    title: 'Bespoke Decorations',
-    desc: 'Spectacular floral ceilings, grand stage backdrops, ambient uplighting, and table designs customized to transform any blank canvas.',
-    icon: Palette,
-    color: '#F59E0B', // Amber
-    link: '/services#decorations',
-  },
-];
 
 export default function ServicesPreview() {
   const containerVariants = {
     hidden: {},
     visible: {
       transition: {
-        staggerChildren: 0.15,
+        staggerChildren: 0.1,
       },
     },
   };
 
   const cardVariants = {
-    hidden: { opacity: 0, y: 40 },
+    hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { type: 'spring' as const, stiffness: 80, damping: 15 },
+      transition: { type: 'spring' as const, stiffness: 85, damping: 15 },
     },
   };
 
@@ -75,20 +45,16 @@ export default function ServicesPreview() {
           whileInView="visible"
           viewport={{ once: true, margin: '-100px' }}
         >
-          {services.map((service) => {
+          {/* Render top 6 services on the homepage */}
+          {servicesData.slice(0, 6).map((service) => {
             const IconComponent = service.icon;
             return (
               <motion.div
-                key={service.title}
+                key={service.id}
                 variants={cardVariants}
                 className={styles.card}
                 style={{
-                  // Dynamic subtle glow properties based on index colors
-                  '--card-hover-border': `rgba(${
-                    service.color === '#EC4899' ? '236, 72, 153' :
-                    service.color === '#10B981' ? '16, 185, 129' :
-                    service.color === '#8B5CF6' ? '139, 92, 246' : '245, 158, 11'
-                  }, 0.35)`,
+                  '--card-hover-border': service.color + '40',
                   '--primary': service.color,
                 } as React.CSSProperties}
               >
@@ -97,7 +63,7 @@ export default function ServicesPreview() {
                 </div>
                 <h3 className={styles.cardTitle}>{service.title}</h3>
                 <p className={styles.cardDesc}>{service.desc}</p>
-                <Link href={service.link} className={styles.cardLink}>
+                <Link href={`/services#${service.id}`} className={styles.cardLink}>
                   <span>Explore Details</span>
                   <ChevronRight size={16} />
                 </Link>
@@ -105,6 +71,13 @@ export default function ServicesPreview() {
             );
           })}
         </motion.div>
+
+        {/* View All CTA Button */}
+        <div className={styles.moreBtnWrapper}>
+          <Link href="/services">
+            <button className={styles.moreBtn}>View All Services</button>
+          </Link>
+        </div>
       </div>
     </section>
   );

@@ -74,19 +74,19 @@ export default function Footer() {
           <h3 className={styles.title}>Services</h3>
           <ul className={styles.linksList}>
             <li className={styles.linkItem}>
-              <Link href="/services#weddings">Luxury Weddings</Link>
+              <Link href="/services#corporate-events">Corporate Events</Link>
             </li>
             <li className={styles.linkItem}>
-              <Link href="/services#corporate">Corporate Conferences</Link>
+              <Link href="/services#convention-exhibition">Convention Exhibitions</Link>
             </li>
             <li className={styles.linkItem}>
-              <Link href="/services#concerts">Festivals & Concerts</Link>
+              <Link href="/services#german-hangar">German Hangar Tents</Link>
             </li>
             <li className={styles.linkItem}>
-              <Link href="/services#decorations">Premium Decorations</Link>
+              <Link href="/services#live-events">Live Music Shows</Link>
             </li>
             <li className={styles.linkItem}>
-              <Link href="/services#private">Theme Parties</Link>
+              <Link href="/services#venue-selection">Venue Selection Audits</Link>
             </li>
           </ul>
         </div>

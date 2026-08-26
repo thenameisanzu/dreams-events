@@ -166,3 +166,30 @@
     padding: 2.5rem 2rem;
   }
 }
+
+.moreBtnWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+.moreBtn {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.9rem 2.25rem;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text-primary);
+  border: 1px solid var(--glass-border);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.moreBtn:hover {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+  box-shadow: 0 5px 15px rgba(139, 92, 246, 0.35);
+  transform: translateY(-2px);
+}
