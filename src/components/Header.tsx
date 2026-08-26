@@ -75,13 +75,24 @@ export default function Header() {
       <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
         <div className={styles.container}>
           <Link href="/" className={styles.logo} onClick={closeMobileMenu}>
-            <Image
-              src="/logo.jpg"
-              alt="Dreams Event management & Decorations Logo"
-              width={40}
-              height={40}
-              className={styles.logoImage}
-            />
+            <div className={styles.logoImageWrapper}>
+              <Image
+                src="/logo.jpg"
+                alt="Dreams Event management & Decorations Dark Logo"
+                width={40}
+                height={40}
+                className={`${styles.logoImage} ${styles.logoImageDark}`}
+                priority
+              />
+              <Image
+                src="/logo-light.png"
+                alt="Dreams Event management & Decorations Light Logo"
+                width={40}
+                height={40}
+                className={`${styles.logoImage} ${styles.logoImageLight}`}
+                priority
+              />
+            </div>
             <div className={styles.logoTextWrapper}>
               <span className={styles.logoTitle}>Dreams</span>
               <span className={styles.logoSub}>Event management & Decorations</span>

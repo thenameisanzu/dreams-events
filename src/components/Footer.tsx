@@ -12,13 +12,22 @@ export default function Footer() {
         {/* Brand Column */}
         <div className={styles.brandCol}>
           <div className={styles.logo}>
-            <Image
-              src="/logo.jpg"
-              alt="Dreams Event management & Decorations Logo"
-              width={40}
-              height={40}
-              className={styles.logoImage}
-            />
+            <div className={styles.logoImageWrapper}>
+              <Image
+                src="/logo.jpg"
+                alt="Dreams Event management & Decorations Dark Logo"
+                width={40}
+                height={40}
+                className={`${styles.logoImage} ${styles.logoImageDark}`}
+              />
+              <Image
+                src="/logo-light.png"
+                alt="Dreams Event management & Decorations Light Logo"
+                width={40}
+                height={40}
+                className={`${styles.logoImage} ${styles.logoImageLight}`}
+              />
+            </div>
             <div className={styles.logoTextWrapper}>
               <span className={styles.logoTitle}>Dreams</span>
               <span className={styles.logoSub}>Event management & Decorations</span>
