@@ -31,7 +31,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
                 try {
                   var theme = localStorage.getItem('theme') || 'dark';
                   document.documentElement.setAttribute('data-theme', theme);
-                  document.documentElement.className = theme;
+                  document.documentElement.classList.add(theme);
                 } catch (e) {}
               })();
             `,

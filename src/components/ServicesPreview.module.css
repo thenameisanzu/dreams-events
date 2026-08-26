@@ -1,6 +1,6 @@
 .section {
   padding: 8rem 2rem;
-  background: #09090b;
+  background: var(--background);
   position: relative;
   overflow: hidden;
 }
@@ -55,8 +55,8 @@
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
   border-radius: 24px;
   padding: 3rem 2.5rem;
   transition: var(--transition-slow);
@@ -84,7 +84,7 @@
   transform: translateY(-8px);
   border-color: var(--card-hover-border);
   box-shadow: 
-    0 20px 40px rgba(0, 0, 0, 0.4),
+    0 20px 40px rgba(0, 0, 0, var(--shadow-opacity)),
     0 0 30px rgba(139, 92, 246, 0.05);
 }
 
@@ -96,13 +96,13 @@
   width: 60px;
   height: 60px;
   border-radius: 18px;
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--input-bg);
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--primary);
   margin-bottom: 2rem;
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--card-border);
   transition: var(--transition-smooth);
 }
 
@@ -179,7 +179,7 @@
   font-weight: 600;
   padding: 0.9rem 2.25rem;
   border-radius: 50px;
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--input-bg);
   color: var(--text-primary);
   border: 1px solid var(--glass-border);
   cursor: pointer;
