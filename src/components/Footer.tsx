@@ -70,6 +70,9 @@ export default function Footer() {
               <Link href="/portfolio">Portfolio</Link>
             </li>
             <li className={styles.linkItem}>
+              <Link href="/gallery">Gallery</Link>
+            </li>
+            <li className={styles.linkItem}>
               <Link href="/blog">Blog</Link>
             </li>
             <li className={styles.linkItem}>
