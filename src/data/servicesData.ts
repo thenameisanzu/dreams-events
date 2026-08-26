@@ -1,5 +1,5 @@
 import React from 'react';
-import { Briefcase, Store, Tent, Landmark, Home, Music, Utensils, Presentation, MapPin } from 'lucide-react';
+import { Heart, Cake, Briefcase, Mic, Sparkles, Calendar, Palette } from 'lucide-react';
 
 export interface Service {
   id: string;
@@ -13,147 +13,115 @@ export interface Service {
 
 export const servicesData: Service[] = [
   {
+    id: 'weddings',
+    title: 'Weddings',
+    desc: 'From grand traditional celebrations to bespoke destination weddings in Kumarakom and Kochi. We manage visual layouts, floral mandaps, and logistics.',
+    icon: Heart,
+    color: '#EC4899', // Pink
+    image: '/hero-bg.jpg',
+    features: [
+      'Floral Mandap & Canopy Decors',
+      'Destination Wedding Logistics',
+      'Engagement Stage Architectures',
+      'Bridal Styling & Dressing Rooms',
+      'Traditional Sadya Catering Plans',
+      'Custom Neon Backdrop Frames'
+    ]
+  },
+  {
+    id: 'birthdays',
+    title: 'Birthdays',
+    desc: 'Vibrant themed birthday parties, domestic anniversary setups, and intimate family gatherings with playful details, photo booths, and balloon decor.',
+    icon: Cake,
+    color: '#F59E0B', // Amber
+    image: '/decor-details.jpg',
+    features: [
+      'Creative Balloon Sculptures',
+      'Themed Visual Photo Backdrops',
+      'Customized Name & Neon Lights',
+      'Professional MC & Sound Systems',
+      'Kids Entertainment & Games Area',
+      'Cake Table Setup & Curation'
+    ]
+  },
+  {
     id: 'corporate-events',
     title: 'Corporate Events',
-    desc: ' Immaculate annual general meetings, corporate retreats, award functions, and product launches designed with strict adherence to scheduling protocols and high-end logistics.',
+    desc: 'Professional seminars, annual general meetings, and corporate award shows. We coordinate audio-visual arrays, VIP lounges, and runtime schedules.',
     icon: Briefcase,
-    color: '#8B5CF6', // Royal Violet
+    color: '#8B5CF6', // Violet
     image: '/corporate.jpg',
     features: [
-      'Interactive Media Backdrops',
-      'Audio-Visual Rigging & Mic Arrays',
-      'Keynote Presentation Integration',
-      'VIP & Guest Coordination Services',
-      'Detailed Stage & Runtime Schedules',
-      'Branded Media Walls & Photobooths'
+      'High-End Sound & Mic Arrays',
+      'Keynote & Presentation Rigs',
+      'Executive Panel Setup Audits',
+      'Wayfinding Signage & Layout Design',
+      'Press Conference Media Rigs',
+      'VIP Guest Hospitality Services'
     ]
   },
   {
-    id: 'convention-exhibition',
-    title: 'Convention Exhibition',
-    desc: 'Scale and structure combined. We build spatial layouts, vendor booth installations, multi-direction signage designs, and registration desks for grand trade shows and exhibitions.',
-    icon: Store,
-    color: '#EC4899', // Pink Accent
-    image: '/decor-details.jpg',
-    features: [
-      'Modular Booth & Stall Construction',
-      'Wayfinding Signs & Layout Plan Sets',
-      'Audio arrays & Central Announcement Grids',
-      'Digital Registration Check-in Desks',
-      'Branding Board Integrations',
-      'On-site Technical Support Teams'
-    ]
-  },
-  {
-    id: 'german-hangar',
-    title: 'German Hangar Tents',
-    desc: 'Heavy-duty German Hangar installations. Complete with weatherproof aluminum frames, luxury inner draping, industrial air conditioning, and heavy-duty structural safety certifications.',
-    icon: Tent,
-    color: '#10B981', // Emerald Accent
-    image: '/hero-bg.jpg',
-    features: [
-      'Weatherproof Aluminum Trusses',
-      'Luxury Inner Fabric Draping',
-      'Industrial HVAC Air-Conditioning',
-      'Custom Glass Entrances & Facades',
-      'Structural Load Safety Certificates',
-      'Modular Raised Floor Base Frameworks'
-    ]
-  },
-  {
-    id: 'government-events',
-    title: 'Government Events',
-    desc: 'Public rally arrangements, protocol compliance, VIP lounge planning, government panel setups, security barrier layouts, and local municipal permit processing.',
-    icon: Landmark,
-    color: '#3B82F6', // Blue Accent
-    image: '/corporate.jpg',
-    features: [
-      'VIP Protocol Layout Compliance',
-      'High-Grade Security Barricading',
-      'Permits, Fire & Noise Licensing',
-      'Massive Public Address (PA) Setups',
-      'Media Press Conference Backdrops',
-      'Backup Power Generator Integrations'
-    ]
-  },
-  {
-    id: 'home-services',
-    title: 'Home Services Decor',
-    desc: 'Elegant domestic celebrations. Custom floral panels, pathway arches, neon lights, and tablescapes for intimate birthday parties, anniversaries, and traditional ceremonies.',
-    icon: Home,
-    color: '#EF4444', // Red Accent
-    image: '/decor-details.jpg',
-    features: [
-      'Custom Fresh Floral Pathway Arches',
-      'Intimate Balloon & Neon backdrops',
-      'Traditional Mandap & Canopy sets',
-      'Modular Sound & Warm Light Arrays',
-      'Table Setting Curation & Linens',
-      'Quick Same-day Setup & Dismantling'
-    ]
-  },
-  {
-    id: 'live-events',
-    title: 'Live Music Events',
-    desc: 'High-energy festivals and concerts. Handled sound engineering, pyro modules, laser show integrations, barricade plans, artist booking handles, and license permissions.',
-    icon: Music,
-    color: '#F59E0B', // Amber Accent
+    id: 'stage-shows',
+    title: 'Stage Shows',
+    desc: 'High-energy live music concerts, traditional classical festivals, and public stage dramas with professional trusses, pyro setups, and sound systems.',
+    icon: Mic,
+    color: '#3B82F6', // Blue
     image: '/concert.jpg',
     features: [
-      'Epic Sound PA & Subwoofer Arrays',
-      'Laser Light Mapping & Pyro Sets',
-      'Government Sound & Fire Permits',
-      'Artist Lounge & VIP Styling Zones',
-      'Safe Crowd Barrier Enclosures',
-      'Stage Structural Safety Signoffs'
+      'Heavy-Duty Stage Truss Rigging',
+      'Epic Line Array Sound Systems',
+      'Pyro & Laser Light Screen Sets',
+      'Artist Green Room Styling',
+      'Crowd Safety Control Fencing',
+      'Zoning Permissions & Licenses'
     ]
   },
   {
-    id: 'menu-planning',
-    title: 'Catering & Menu Planning',
-    desc: 'Gourmet dining setups, visual buffet styling, live counters, customized culinary themes, and premium server staffing to complement your event themes.',
-    icon: Utensils,
-    color: '#10B981', // Emerald Accent
+    id: 'decorations',
+    title: 'Decorations',
+    desc: 'Bespoke stage styling, ceiling floral installations, elegant fabric drapes, light design concepts, and pathway gates for premium events.',
+    icon: Sparkles,
+    color: '#10B981', // Emerald
     image: '/decor-details.jpg',
     features: [
-      'Curated Culinary Theme Menus',
-      'Premium Buffet Stalls & Lighting',
-      'Interactive Live Cooking Stations',
-      'Bespoke Mocktail & Beverage Bars',
-      'Professional Server & Staff Curation',
-      'Strict Hygiene & Prep Safety Codes'
+      'Fresh Floral Ceiling Layouts',
+      'Glassmorphic Arch Gateways',
+      'Neon Signage & Fairy Light Arrays',
+      'Premium Table Linens & Settings',
+      'Pathway Arch Floral Arrangements',
+      'Bespoke Centerpiece Styling'
     ]
   },
   {
-    id: 'seminar',
-    title: 'Seminars & Panel Talks',
-    desc: 'Academic panels and corporate seminars. Setup screen panels, presenter podiums, clean lapel acoustics, and executive seating arrays for targeted knowledge programs.',
-    icon: Presentation,
-    color: '#8B5CF6', // Royal Violet
-    image: '/corporate.jpg',
-    features: [
-      'Interactive Presentation Podiums',
-      'Wireless Lapel & Handheld Audio',
-      'Dual Side Display Screen Displays',
-      'Panel Speaker Table & Lighting Sets',
-      'Corporate Folder & Stationary Sets',
-      'Q&A Stand Mic Setup Deployments'
-    ]
-  },
-  {
-    id: 'venue-selection',
-    title: 'Venue Selection Audits',
-    desc: 'Negotiation deals, capacity calculations, layout mapping, structural feasibility inspections, and municipal restriction checks across premium properties.',
-    icon: MapPin,
-    color: '#F59E0B', // Amber Accent
+    id: 'event-planning',
+    title: 'Event Planning',
+    desc: 'Complete event coordination from venue selection audits to checklist tracking, vendor management, schedule designs, and budget reviews.',
+    icon: Calendar,
+    color: '#EF4444', // Red
     image: '/hero-bg.jpg',
     features: [
-      'Exclusive Venue Contract Deals',
-      'Exact Guest Capacity Mapping',
-      'Acoustics & Power Feasibility Tests',
-      'Municipal Zoning Restriction Checks',
-      'Site Layout Floorplan Drafting',
-      'Multi-property Site Visit Plannings'
+      'Venue Contract Feasibility Audits',
+      'Vendor Deal & Fee Negotiations',
+      'Complete Checklist & Plan Tracking',
+      'Stage Schedule Runtime Designs',
+      'Permit & Local Licensing Handles',
+      'On-Site Coordination Directors'
+    ]
+  },
+  {
+    id: 'theme-events',
+    title: 'Theme Events',
+    desc: 'Creative customized events. We plan concepts, design props, build custom backdrops, and coordinate outfits to execute a complete themed experience.',
+    icon: Palette,
+    color: '#8B5CF6', // Violet
+    image: '/corporate.jpg',
+    features: [
+      'Bespoke Theme Prop Construction',
+      'Immersive Backdrop Screen Sets',
+      'Color-Coordinated Event Settings',
+      'Custom Costumed Staff Curation',
+      'Creative Theme Invitation Designs',
+      'Interactive Photo Zone Displays'
     ]
   }
 ];
