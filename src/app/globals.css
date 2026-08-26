@@ -27,6 +27,49 @@
   
   --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-slow: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Dynamic variables for light/dark theme compatibility */
+  --hero-bg-color: #030304;
+  --hero-overlay: radial-gradient(circle at center, rgba(10, 10, 12, 0.35) 0%, rgba(10, 10, 12, 0.94) 90%);
+  --grid-color: rgba(255, 255, 255, 0.02);
+  --shadow-opacity: 0.4;
+  --contact-card-bg: rgba(255, 255, 255, 0.02);
+  --input-bg: rgba(255, 255, 255, 0.03);
+}
+
+/* Light theme overrides with custom palette: #B983FF, #94B3FD, #94DAFF, #99FEFF, and white */
+html[data-theme="light"],
+html.light {
+  --background: #FAF9FF; /* Clean off-white background with a hint of purple */
+  --foreground: #20223D; /* Deep navy text for contrast */
+  
+  --primary: #B983FF; /* Pastel purple */
+  --primary-glow: rgba(185, 131, 255, 0.12);
+  --primary-hover: #A566FF;
+  
+  --secondary: #94B3FD; /* Pastel blue */
+  --secondary-glow: rgba(148, 179, 253, 0.12);
+  
+  --accent: #94DAFF; /* Sky blue */
+  --accent-pink: #99FEFF; /* Light cyan */
+  
+  --card-bg: rgba(255, 255, 255, 0.9);
+  --card-border: rgba(185, 131, 255, 0.08);
+  --card-hover-border: rgba(185, 131, 255, 0.3);
+  
+  --glass-bg: rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(185, 131, 255, 0.12);
+  
+  --text-primary: #20223D;
+  --text-secondary: #5E6184;
+  --text-muted: #8E91B2;
+
+  --hero-bg-color: #FAF9FF;
+  --hero-overlay: radial-gradient(circle at center, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.94) 90%);
+  --grid-color: rgba(148, 179, 253, 0.15);
+  --shadow-opacity: 0.06;
+  --contact-card-bg: rgba(255, 255, 255, 0.9);
+  --input-bg: rgba(255, 255, 255, 0.95);
 }
 
 * {
@@ -151,8 +194,8 @@ a {
   position: absolute;
   inset: 0;
   background-image: 
-    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    linear-gradient(var(--grid-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
   background-size: 50px 50px;
   background-position: center;
   mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);

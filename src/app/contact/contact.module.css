@@ -172,13 +172,13 @@
 
 /* Form Column */
 .formCol {
-  background: rgba(255, 255, 255, 0.01);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: var(--contact-card-bg);
+  border: 1px solid var(--card-border);
   border-radius: 32px;
   padding: 3.5rem;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, var(--shadow-opacity));
 }
 
 .formCol::before {
@@ -214,8 +214,8 @@
 }
 
 .input, .select, .textarea {
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--input-bg);
+  border: 1px solid var(--card-border);
   border-radius: 12px;
   padding: 0.9rem 1.1rem;
   color: var(--text-primary);

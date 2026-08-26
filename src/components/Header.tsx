@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Sun, Moon } from 'lucide-react';
 import styles from './Header.module.css';
 
 const navItems = [
@@ -20,7 +20,24 @@ const navItems = [
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [theme, setTheme] = useState<'dark' | 'light'>(() => {
+    if (typeof window !== 'undefined') {
+      return (localStorage.getItem('theme') as 'dark' | 'light') || 'dark';
+    }
+    return 'dark';
+  });
   const pathname = usePathname();
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    document.documentElement.className = theme;
+  }, [theme]);
+
+  const toggleTheme = () => {
+    const nextTheme = theme === 'dark' ? 'light' : 'dark';
+    setTheme(nextTheme);
+    localStorage.setItem('theme', nextTheme);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -82,6 +99,16 @@ export default function Header() {
                 );
               })}
             </ul>
+
+            {/* Desktop Theme Toggle */}
+            <button 
+              onClick={toggleTheme} 
+              className={styles.themeToggle} 
+              aria-label="Toggle Theme"
+            >
+              {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
+            </button>
+
             <Link href="/contact">
               <button className={styles.ctaBtn}>Book Consultation</button>
             </Link>
@@ -132,9 +159,28 @@ export default function Header() {
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.4 }}
-              style={{ width: '100%', display: 'flex', justifyContent: 'center' }}
+              transition={{ delay: 0.3 }}
+              style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.5rem' }}
             >
+              {/* Mobile Theme Toggle */}
+              <button 
+                onClick={toggleTheme} 
+                className={styles.mobileThemeToggle} 
+                aria-label="Toggle Theme"
+              >
+                {theme === 'dark' ? (
+                  <>
+                    <Sun size={20} />
+                    <span>Light Mode</span>
+                  </>
+                ) : (
+                  <>
+                    <Moon size={20} />
+                    <span>Dark Mode</span>
+                  </>
+                )}
+              </button>
+
               <Link href="/contact" style={{ width: '80%', display: 'flex', justifyContent: 'center' }} onClick={closeMobileMenu}>
                 <button className={styles.mobileCta}>Book Consultation</button>
               </Link>
