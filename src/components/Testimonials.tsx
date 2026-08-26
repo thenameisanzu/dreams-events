@@ -7,19 +7,19 @@ import styles from './Testimonials.module.css';
 
 const testimonials = [
   {
-    feedback: "Dreams transformed our venue into a magical forest. The floral ceilings, cascading crystals, and lighting setup left our 600 guests speechless. Their execution was absolutely flawless!",
-    name: "Aishwarya & Rohan Malhotra",
-    role: "Bride & Groom | Luxury Wedding"
+    feedback: "Dreams transformed our venue in Kumarakom into a magical setup. The floral ceilings, cascading traditional lamps, and lighting layout left our 600 guests speechless. Their execution was absolutely flawless!",
+    name: "Anjali & Gautham Krishnan",
+    role: "Bride & Groom | Kerala Destination Wedding"
   },
   {
-    feedback: "Managing an international tech summit with 1,200 delegates requires absolute precision. The team handled our staging, dual screens, live broadcasting, and seating layout perfectly. Highly recommended!",
-    name: "Vikram Sethi",
-    role: "VP of Operations, Innovate Tech Global"
+    feedback: "Managing our state convention with 1,200 delegates requires absolute precision. The team handled our staging, dual screens, live broadcasting, and seating layout perfectly. Highly recommended!",
+    name: "Vinod Kumar",
+    role: "Convenor, Kerala IT Summit"
   },
   {
-    feedback: "The stage design, acoustics, and laser mapping for our concert was insane. They handled the crowd barriers, crew passes, and main artists with the highest professionalism. Best event team in the country.",
+    feedback: "The stage design, acoustics, and laser mapping for our concert in Kochi was insane. They handled the crowd barriers, crew passes, and main artists with the highest professionalism. Best event team in Kerala.",
     name: "Kabir Khan",
-    role: "Tour Producer, Echoes Music Festival"
+    role: "Co-founder, Kochi Music Festival"
   }
 ];
 

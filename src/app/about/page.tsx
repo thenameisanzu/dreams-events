@@ -9,43 +9,43 @@ const milestones = [
   {
     year: '2014',
     title: 'Company Inception',
-    desc: 'Founded as a boutique floral and local wedding decoration firm in Mumbai, focus on luxury visual concepts.'
+    desc: 'Founded as a boutique floral and local wedding decoration firm in Kottayam, focusing on traditional and luxury visual concepts.'
   },
   {
     year: '2018',
-    title: 'First Arena Show Production',
-    desc: 'Contracted stage architecture, laser mapping, and crowd flow logistics for a 8,000-delegate electronic music showcase.'
+    title: 'First Large Concert Production',
+    desc: 'Contracted stage architecture, laser mapping, and crowd flow logistics for a 8,000-attendee live music concert in Kochi.'
   },
   {
     year: '2022',
-    title: 'Multicity Storage & Warehousing',
-    desc: 'Established custom furniture warehouses and decorator units across Jaipur, Goa, and Delhi to manage multicity demands.'
+    title: 'State-wide Storage Warehousing',
+    desc: 'Established custom furniture warehouses and decorator units across Kottayam, Kochi, and Trivandrum to manage state-wide demands.'
   },
   {
     year: '2026',
-    title: 'National Design Excellence Award',
-    desc: 'Recognized as the Country’s Top Luxury Event Stylists after successfully completing over 500 premium productions.'
+    title: 'Kerala Design Excellence Award',
+    desc: 'Recognized as Kerala’s Premier Luxury Event Stylists after successfully completing over 500 premium productions.'
   }
 ];
 
 const teamMembers = [
   {
     initials: 'RM',
-    name: 'Rohan Malhotra',
+    name: 'Rohan Mathew',
     role: 'Co-Founder & CEO',
-    bio: 'Oversees vendor operations, logistics timelines, and contract matrices. Ensures the back-end runs as beautifully as the front-end.'
+    bio: 'Oversees vendor operations, logistics timelines, and contract matrices across Kerala. Ensures the back-end runs as beautifully as the front-end.'
   },
   {
-    initials: 'AS',
-    name: 'Aishwarya Sen',
+    initials: 'AN',
+    name: 'Anjali Nair',
     role: 'Head of Event Design',
-    bio: 'An artist at heart. Speeds visual mockups, floral ceiling layouts, and color coordination palettes for luxury banquets.'
+    bio: 'An artist at heart. Speeds visual mockups, floral ceiling layouts, and color coordination palettes for traditional and modern Kerala events.'
   },
   {
-    initials: 'KM',
-    name: 'Kabir Mehta',
+    initials: 'KK',
+    name: 'Kabir Kurian',
     role: 'Technical Operations Director',
-    bio: 'Staging, audio-visual grids, laser mappings, and crowd safety specialist. Keeps concert layouts high-energy and compliant.'
+    bio: 'Staging, audio-visual grids, laser mappings, and crowd safety specialist. Keeps concert layouts high-energy, safe, and fully compliant.'
   }
 ];
 

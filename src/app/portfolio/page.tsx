@@ -22,63 +22,63 @@ interface PortfolioItem {
 const portfolioItems: PortfolioItem[] = [
   {
     id: 1,
-    title: 'The Grand Royal Palace Wedding',
+    title: 'The Bolgatty Island Palace Wedding',
     category: 'Weddings',
     image: '/hero-bg.jpg',
     date: 'December 2025',
-    location: 'Udaipur Palace, Rajasthan',
-    client: 'Malhotra Family',
-    desc: 'A spectacular royal wedding featuring custom-built floating floral ceilings, custom mandap setups, and ambient neon-uplighting to create a fairy-tale look.'
+    location: 'Bolgatty Palace, Kochi, Kerala',
+    client: 'Krishnan Family',
+    desc: 'A spectacular heritage palace wedding featuring custom-built floating floral ceilings, custom traditional mandap setups, and ambient neon-uplighting to create a fairy-tale look.'
   },
   {
     id: 2,
-    title: 'Technovate Global Summit 2026',
+    title: 'Kerala IT Summit 2026',
     category: 'Corporate',
     image: '/corporate.jpg',
     date: 'March 2026',
-    location: 'Jio World Convention Centre, Mumbai',
-    client: 'Technovate Global Corp',
-    desc: 'An international corporate tech summit managing staging, dual curved led backdrops, lighting design, live broadcasting, and seamless guest check-ins for 1,200 attendees.'
+    location: 'Lulu Bolgatty International Convention Centre, Kochi',
+    client: 'Kerala IT Mission',
+    desc: 'A grand state-level corporate tech summit managing staging, dual curved led backdrops, lighting design, live broadcasting, and seamless guest check-ins for 1,200 attendees.'
   },
   {
     id: 3,
-    title: 'Echoes Live Stadium Show',
+    title: 'Kochi Music Festival Live Stage',
     category: 'Concerts',
     image: '/concert.jpg',
     date: 'January 2026',
-    location: 'Goa Arena, Goa',
+    location: 'Jawaharlal Nehru Stadium Ground, Kochi, Kerala',
     client: 'Echoes Entertainment',
-    desc: 'A massive high-energy rock concert stage production. Handled professional sound engineering, pyrotechnics, laser light mapping, artist lounges, and strict crowd-barrier layouts.'
+    desc: 'A massive high-energy music festival stage production. Handled professional sound engineering, pyrotechnics, laser light mapping, artist lounges, and strict crowd-barrier layouts.'
   },
   {
     id: 4,
-    title: 'Gold & Orchid Banquet Decor',
+    title: 'Traditional Gold & Orchid Canopy',
     category: 'Weddings',
     image: '/decor-details.jpg',
     date: 'February 2026',
-    location: 'Taj Palace, Mumbai',
-    client: 'Dr. Shah & Family',
-    desc: 'Luxury table settings featuring fine crystal glassware, amber candles, gold centerpiece stands, and center arrangements composed of white roses and orchids.'
+    location: 'Raviz Ashtamudi, Kollam, Kerala',
+    client: 'Dr. Nair & Family',
+    desc: 'Luxury table settings featuring fine crystal glassware, traditional brass lamps, gold centerpiece stands, and center arrangements composed of white roses and orchids.'
   },
   {
     id: 5,
-    title: 'Starlight Awards & Gala',
+    title: 'Kerala Business Awards & Gala',
     category: 'Corporate',
     image: '/hero-bg.jpg',
     date: 'November 2025',
-    location: 'Grand Hyatt, Delhi',
-    client: 'Apex Financial Services',
+    location: 'Le Meridien, Kochi, Kerala',
+    client: 'Kerala Financial Services',
     desc: 'A premium corporate gala dinner celebrating top achievers. Structured glass walkways, custom stage design, media wall photo ops, and live entertainment stages.'
   },
   {
     id: 6,
-    title: 'Pulse Arena Music Tour',
+    title: 'Pulse Arena Kochi Concert Tour',
     category: 'Concerts',
     image: '/concert.jpg',
     date: 'April 2026',
-    location: 'DY Patil Stadium, Navi Mumbai',
+    location: 'Kaloor Stadium Ground, Kochi, Kerala',
     client: 'Pulse Music Group',
-    desc: 'Stadium show layout built for 15,000 attendees, complete with safety barricades, VIP lounges, local government permits, and stage safety compliance inspections.'
+    desc: 'Grand concert show layout built for 15,000 attendees, complete with safety barricades, VIP lounges, local government permits, and stage safety compliance inspections.'
   }
 ];
 
