@@ -4,7 +4,6 @@ import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { blogPosts } from '@/data/blogData';
@@ -54,42 +53,46 @@ export default function BlogIndexPage() {
         {/* Gallery Grid */}
         <motion.div layout className={styles.grid}>
           <AnimatePresence mode="popLayout">
-            {filteredPosts.map((post) => (
-              <motion.article
-                key={post.id}
-                layout
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.95 }}
-                transition={{ duration: 0.4 }}
-                className={styles.card}
-              >
-                <div className={styles.cardImgArea}>
-                  <Image
-                    src={post.image}
-                    alt={post.title}
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    quality={80}
-                    className={styles.cardImg}
-                  />
-                </div>
-                <div className={styles.cardDetails}>
-                  <div className={styles.cardMeta}>
-                    <span className={styles.cardTag}>{post.category}</span>
-                    <span>{post.date}</span>
+            {filteredPosts.map((post) => {
+              const wordCount = post.content ? post.content.split(/\s+/).length : 120;
+              const readTime = Math.ceil(wordCount / 200) + ' min read';
+
+              return (
+                <motion.article
+                  key={post.id}
+                  layout
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.95 }}
+                  transition={{ duration: 0.4 }}
+                  className={styles.card}
+                >
+                  <Link href={`/blog/${post.id}`} className={styles.cardImgArea}>
+                    <Image
+                      src={post.image}
+                      alt={post.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      quality={80}
+                      className={styles.cardImg}
+                    />
+                  </Link>
+                  <div className={styles.cardDetails}>
+                    <div className={styles.cardMeta}>
+                      <span>by {post.author}</span>
+                      <span className={styles.metaDot}>•</span>
+                      <span>{post.date}</span>
+                      <span className={styles.metaDot}>•</span>
+                      <span>{readTime}</span>
+                    </div>
+                    <Link href={`/blog/${post.id}`}>
+                      <h3 className={styles.cardTitle}>{post.title}</h3>
+                    </Link>
+                    <p className={styles.cardExcerpt}>{post.excerpt}</p>
                   </div>
-                  <Link href={`/blog/${post.id}`}>
-                    <h3 className={styles.cardTitle}>{post.title}</h3>
-                  </Link>
-                  <p className={styles.cardExcerpt}>{post.excerpt}</p>
-                  <Link href={`/blog/${post.id}`} className={styles.cardLink}>
-                    <span>Read Article</span>
-                    <ArrowRight size={16} />
-                  </Link>
-                </div>
-              </motion.article>
-            ))}
+                </motion.article>
+              );
+            })}
           </AnimatePresence>
         </motion.div>
       </section>

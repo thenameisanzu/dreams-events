@@ -6,35 +6,32 @@
 
 .hero {
   position: relative;
-  padding: 10rem 2rem 4rem;
-  background: linear-gradient(180deg, rgba(139, 92, 246, 0.05) 0%, transparent 100%);
-  text-align: center;
+  padding: 10rem 2rem 3rem;
+  background: transparent;
   overflow: hidden;
 }
 
 .heroContainer {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
   position: relative;
   z-index: 2;
+  text-align: left;
+  border-bottom: 1px dashed var(--card-border);
+  padding-bottom: 2.5rem;
 }
 
 .badge {
-  font-family: var(--font-outfit), sans-serif;
-  font-size: 0.85rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  color: var(--primary);
-  letter-spacing: 0.1em;
-  margin-bottom: 1rem;
-  display: block;
+  display: none;
 }
 
 .title {
   font-family: var(--font-outfit), sans-serif;
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
   font-weight: 800;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
 }
 
 .titleAccent {
@@ -45,30 +42,31 @@
 
 .subtitle {
   color: var(--text-secondary);
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   line-height: 1.6;
+  max-width: 700px;
 }
 
 .content {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem 2rem 8rem;
+  padding: 2.5rem 2rem 8rem;
 }
 
 .filterBar {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  gap: 1rem;
+  gap: 0.75rem;
   flex-wrap: wrap;
-  margin-bottom: 4rem;
+  margin-bottom: 3.5rem;
 }
 
 .filterBtn {
   font-family: var(--font-outfit), sans-serif;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 600;
-  padding: 0.6rem 1.5rem;
+  padding: 0.55rem 1.35rem;
   border-radius: 50px;
   background: var(--input-bg);
   color: var(--text-secondary);
@@ -92,31 +90,29 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: 3rem;
+  gap: 3.5rem 2.5rem;
 }
 
 .card {
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-radius: 24px;
-  overflow: hidden;
+  background: transparent;
+  border: none;
+  overflow: visible;
   display: flex;
   flex-direction: column;
   transition: var(--transition-smooth);
 }
 
 .card:hover {
-  transform: translateY(-6px);
-  border-color: var(--card-hover-border);
-  box-shadow: 
-    0 20px 40px rgba(0, 0, 0, 0.4),
-    0 0 20px rgba(139, 92, 246, 0.03);
+  transform: translateY(-5px);
 }
 
 .cardImgArea {
   position: relative;
-  aspect-ratio: 16/10;
+  aspect-ratio: 16 / 10;
   width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  display: block;
 }
 
 .cardImg {
@@ -125,11 +121,11 @@
 }
 
 .card:hover .cardImg {
-  transform: scale(1.03);
+  transform: scale(1.04);
 }
 
 .cardDetails {
-  padding: 2.25rem;
+  padding: 1.25rem 0 0 0;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -137,28 +133,25 @@
 
 .cardMeta {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin-bottom: 1rem;
+  gap: 0.4rem;
+  margin-bottom: 0.6rem;
   font-size: 0.8rem;
   color: var(--text-muted);
 }
 
-.cardTag {
-  font-family: var(--font-outfit), sans-serif;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: var(--primary);
-  letter-spacing: 0.05em;
+.metaDot {
+  color: var(--text-muted);
+  opacity: 0.5;
 }
 
 .cardTitle {
   font-family: var(--font-outfit), sans-serif;
-  font-size: 1.35rem;
+  font-size: 1.3rem;
   font-weight: 700;
   color: var(--text-primary);
-  line-height: 1.3;
-  margin-bottom: 1rem;
+  line-height: 1.35;
+  margin-bottom: 0.6rem;
   transition: var(--transition-smooth);
 }
 
@@ -170,40 +163,23 @@
   font-size: 0.92rem;
   color: var(--text-secondary);
   line-height: 1.6;
-  margin-bottom: 2rem;
-  flex-grow: 1;
-}
-
-.cardLink {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-family: var(--font-outfit), sans-serif;
-  font-size: 0.9rem;
-  font-weight: 700;
-  color: var(--text-primary);
-  align-self: flex-start;
-}
-
-.cardLink svg {
-  transition: var(--transition-smooth);
-}
-
-.card:hover .cardLink {
-  color: var(--primary);
-}
-
-.card:hover .cardLink svg {
-  transform: translateX(5px);
+  margin-bottom: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 /* Responsiveness */
 @media (max-width: 768px) {
   .hero {
-    padding: 8rem 1.5rem 3rem;
+    padding: 8rem 1.5rem 2rem;
+  }
+  .heroContainer {
+    padding-bottom: 1.75rem;
   }
   .content {
-    padding: 1rem 1.5rem 6rem;
+    padding: 1.5rem 1.5rem 6rem;
   }
   .filterBar {
     gap: 0.5rem;
@@ -215,9 +191,6 @@
   }
   .grid {
     grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-  .cardDetails {
-    padding: 1.75rem;
+    gap: 2.5rem;
   }
 }
