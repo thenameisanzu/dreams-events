@@ -101,7 +101,7 @@ export default function Footer() {
             </li>
             <li className={styles.contactItem}>
               <Phone size={18} />
-              <span>+91 98765 43210</span>
+              <span>+91 85938 90765</span>
             </li>
             <li className={styles.contactItem}>
               <Mail size={18} />

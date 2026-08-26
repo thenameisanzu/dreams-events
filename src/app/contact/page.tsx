@@ -130,7 +130,7 @@ export default function ContactPage() {
               </div>
               <div>
                 <span className={styles.infoLabel}>Direct Line</span>
-                <span className={styles.infoVal}>+91 98765 43210</span>
+                <span className={styles.infoVal}>+91 85938 90765</span>
               </div>
             </li>
             <li className={styles.infoItem}>
@@ -148,18 +148,25 @@ export default function ContactPage() {
               </div>
               <div>
                 <span className={styles.infoLabel}>Creative Hours</span>
-                <span className={styles.infoVal}>Mon - Sat: 10:00 AM - 07:00 PM</span>
+                <span className={styles.infoVal}>Open 24 Hours</span>
               </div>
             </li>
           </ul>
 
           {/* Custom Interactive Map Placeholder */}
-          <div className={styles.mapMock}>
-            <div className={styles.mapGrid} />
-            <MapPin size={36} className={styles.mapMarker} />
-            <span className={styles.mapText}>Dreams Event Warehouse</span>
-            <span className={styles.mapSub}>Click to open location in Google Maps</span>
-          </div>
+          <a 
+            href="https://share.google/WTjXVVUWdRoSpqoad" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            style={{ display: 'block', width: '100%' }}
+          >
+            <div className={styles.mapMock}>
+              <div className={styles.mapGrid} />
+              <MapPin size={36} className={styles.mapMarker} />
+              <span className={styles.mapText}>Dreams Event Warehouse</span>
+              <span className={styles.mapSub}>Click to open location in Google Maps</span>
+            </div>
+          </a>
         </div>
 
         {/* Form Column */}
