@@ -16,8 +16,8 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Dreams Event Management & Decorations | Luxury Event Planners",
-  description: "Dreams Event Management & Decorations designs and executes luxury weddings, grand corporate events, concerts, festivals, and spectacular decorations.",
+  title: "Dreams Event management & Decorations | Luxury Event Planners",
+  description: "Dreams Event management & Decorations designs and executes luxury weddings, grand corporate events, concerts, festivals, and spectacular decorations.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

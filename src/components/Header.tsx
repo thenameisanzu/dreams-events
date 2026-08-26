@@ -54,7 +54,7 @@ export default function Header() {
           <Link href="/" className={styles.logo} onClick={closeMobileMenu}>
             <Image
               src="/logo.jpg"
-              alt="Dreams Event Management & Decorations Logo"
+              alt="Dreams Event management & Decorations Logo"
               width={40}
               height={40}
               className={styles.logoImage}

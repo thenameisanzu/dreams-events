@@ -14,7 +14,7 @@ export default function Footer() {
           <div className={styles.logo}>
             <Image
               src="/logo.jpg"
-              alt="Dreams Event Management & Decorations Logo"
+              alt="Dreams Event management & Decorations Logo"
               width={40}
               height={40}
               className={styles.logoImage}
@@ -22,7 +22,7 @@ export default function Footer() {
             <span>Dreams</span>
           </div>
           <p className={styles.desc}>
-            Crafting spectacular experiences, luxury designs, and seamless logistics. Dreams Event Management & Decorations handles everything from corporate retreats to luxury weddings.
+            Crafting spectacular experiences, luxury designs, and seamless logistics. Dreams Event management & Decorations handles everything from corporate retreats to luxury weddings.
           </p>
           <div className={styles.socials}>
             {/* Facebook Custom SVG */}
@@ -113,7 +113,7 @@ export default function Footer() {
 
       {/* Footer Bottom */}
       <div className={styles.bottom}>
-        <p>&copy; {currentYear} Dreams Event Management & Decorations. All rights reserved.</p>
+        <p>&copy; {currentYear} Dreams Event management & Decorations. All rights reserved.</p>
         <div className={styles.legal}>
           <Link href="/privacy">Privacy Policy</Link>
           <Link href="/terms">Terms of Service</Link>

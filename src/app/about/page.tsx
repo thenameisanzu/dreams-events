@@ -78,7 +78,7 @@ export default function AboutPage() {
             The Creative <span className={styles.titleAccent}>Force</span>
           </h1>
           <p className={styles.subtitle}>
-            Learn about Dreams Event Management & Decorations—our journey, core values, and the visionaries crafting high-end productions.
+            Learn about Dreams Event management & Decorations—our journey, core values, and the visionaries crafting high-end productions.
           </p>
         </div>
         <div className="grid-bg" />
@@ -90,7 +90,7 @@ export default function AboutPage() {
           <div className={styles.storyText}>
             <h2>Our Story</h2>
             <p>
-              Founded in 2014, Dreams Event Management & Decorations set out to bridge the gap between artistic, high-concept decor and disciplined event logistics. We started as a small styling outfit, dressing local wedding stages with customized marigolds and orchids.
+              Founded in 2014, Dreams Event management & Decorations set out to bridge the gap between artistic, high-concept decor and disciplined event logistics. We started as a small styling outfit, dressing local wedding stages with customized marigolds and orchids.
             </p>
             <p>
               Over the last decade, we expanded our design warehouses and specialized technical teams. Today, we manage stadium rock concerts, multi-day tech conferences, and elite destination weddings with equal dedication, delivering experiences that are cohesive, striking, and flawless.

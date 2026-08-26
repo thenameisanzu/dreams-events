@@ -64,7 +64,7 @@ export default function ServicesPreview() {
             Crafting Extraordinary <span className={styles.titleAccent}>Experiences</span>
           </h2>
           <p className={styles.desc}>
-            Dreams Event Management & Decorations combines artistic design with strategic logistics to deliver events that are flawless, memorable, and visually stunning.
+            Dreams Event management & Decorations combines artistic design with strategic logistics to deliver events that are flawless, memorable, and visually stunning.
           </p>
         </div>
 
