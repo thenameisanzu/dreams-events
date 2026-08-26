@@ -97,7 +97,7 @@ export default function Footer() {
           <ul className={styles.contactList}>
             <li className={styles.contactItem}>
               <MapPin size={20} />
-              <span>101 Luxury Boulevard, Suite 500, Mumbai, India</span>
+              <span>Kidangoor South, Kottayam, Kerala - 686583, India</span>
             </li>
             <li className={styles.contactItem}>
               <Phone size={18} />

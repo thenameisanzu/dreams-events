@@ -121,7 +121,7 @@ export default function ContactPage() {
               </div>
               <div>
                 <span className={styles.infoLabel}>Headquarters</span>
-                <span className={styles.infoVal}>101 Luxury Boulevard, Suite 500, Mumbai, India</span>
+                <span className={styles.infoVal}>Kidangoor South, Kottayam, Kerala - 686583, India</span>
               </div>
             </li>
             <li className={styles.infoItem}>
