@@ -30,7 +30,7 @@ export default function Hero() {
   return (
     <section className={styles.hero}>
       {/* Parallax / Floating Background Image */}
-      <motion.div 
+      <motion.div
         className={styles.bgImage}
         initial={{ scale: 1.1, opacity: 0 }}
         animate={{ scale: 1.02, opacity: 0.45 }}
@@ -51,7 +51,7 @@ export default function Hero() {
       <div className={styles.overlay} />
 
       {/* Hero Content */}
-      <motion.div 
+      <motion.div
         className={styles.container}
         variants={containerVariants}
         initial="hidden"
@@ -60,18 +60,18 @@ export default function Hero() {
         {/* Animated Badge */}
         <motion.div className={styles.badge} variants={itemVariants}>
           <Sparkles className={styles.badgeSparkle} size={14} />
-          <span>Award-Winning Event Stylists</span>
+          <span>CREATIVE EVENT SPECIALISTS</span>
         </motion.div>
 
         {/* Hero Title */}
         <motion.h1 className={styles.title} variants={itemVariants}>
-          {"We Don't Just Manage Events."}<br />
-          <span className={styles.titleAccent}>We Craft Masterpieces.</span>
+          {"We Create Moments."}<br />
+          <span className={styles.titleAccent}>You Remember Forever.</span>
         </motion.h1>
 
         {/* Hero Subtitle */}
         <motion.p className={styles.subtitle} variants={itemVariants}>
-          Bespoke weddings, luxury corporate conferences, rock concerts, and breathtaking decorations designed to leave a lasting impression.
+          From intimate celebrations to grand occasions, we bring your dream events to life across Kerala.
         </motion.p>
 
         {/* CTA Buttons */}
@@ -90,7 +90,7 @@ export default function Hero() {
       </motion.div>
 
       {/* Scroll indicator */}
-      <motion.div 
+      <motion.div
         className={styles.scrollIndicator}
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.7 }}
