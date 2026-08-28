@@ -158,10 +158,34 @@
   .section {
     padding: 6rem 1.5rem;
   }
+
   .grid {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
+
+  .card {
+    padding: 2.25rem 1.5rem;
+  }
+
+  .cardTitle {
+    font-size: 1.2rem;
+  }
+
+  .cardDesc {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .section {
+    padding: 7rem 1.5rem;
+  }
+
+  .grid {
+    gap: 2rem;
+  }
+
   .card {
     padding: 2.5rem 2rem;
   }

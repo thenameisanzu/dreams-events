@@ -92,7 +92,7 @@ export default function StatsSection() {
           viewport={{ once: true, margin: '-100px' }}
         >
           <Image
-            src="/decor-details.jpg"
+            src="/gallery/decorations/event-09.jpg"
             alt="Intricate luxury table settings, roses and candle lights at an event"
             fill
             sizes="(max-width: 992px) 100vw, 45vw"

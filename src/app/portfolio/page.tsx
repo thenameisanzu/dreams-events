@@ -22,67 +22,67 @@ interface PortfolioItem {
 const portfolioItems: PortfolioItem[] = [
   {
     id: 1,
-    title: 'The Bolgatty Island Palace Wedding',
+    title: 'Rose-Petal Wedding Celebration',
     category: 'Weddings',
-    image: '/hero-bg.jpg',
-    date: 'December 2025',
-    location: 'Bolgatty Palace, Kochi, Kerala',
-    client: 'Krishnan Family',
-    desc: 'A spectacular heritage palace wedding featuring custom-built floating floral ceilings, custom traditional mandap setups, and ambient neon-uplighting to create a fairy-tale look.'
+    image: '/gallery/weddings/event-03.jpg',
+    date: 'Wedding celebration',
+    location: 'Indoor venue',
+    client: 'Private celebration',
+    desc: 'A joyful couple’s celebration framed by falling rose petals, warm lighting, and a decorated reception stage.'
   },
   {
     id: 2,
-    title: 'Kerala IT Summit 2026',
-    category: 'Corporate',
-    image: '/corporate.jpg',
-    date: 'March 2026',
-    location: 'Lulu Bolgatty International Convention Centre, Kochi',
-    client: 'Kerala IT Mission',
-    desc: 'A grand state-level corporate tech summit managing staging, dual curved led backdrops, lighting design, live broadcasting, and seamless guest check-ins for 1,200 attendees.'
+    title: 'Pink and Gold Banquet Seating',
+    category: 'Decorations',
+    image: '/gallery/decorations/event-15.jpg',
+    date: 'Reception décor',
+    location: 'Banquet hall',
+    client: 'Private celebration',
+    desc: 'A banquet hall dressed with pink chair bows, gold seating, and tall floral centrepieces.'
   },
   {
     id: 3,
-    title: 'Kochi Music Festival Live Stage',
-    category: 'Concerts',
-    image: '/concert.jpg',
-    date: 'January 2026',
-    location: 'Jawaharlal Nehru Stadium Ground, Kochi, Kerala',
-    client: 'Echoes Entertainment',
-    desc: 'A massive high-energy music festival stage production. Handled professional sound engineering, pyrotechnics, laser light mapping, artist lounges, and strict crowd-barrier layouts.'
+    title: 'Wedding Party on a Floral Stage',
+    category: 'Weddings',
+    image: '/gallery/decorations/event-08.jpg',
+    date: 'Wedding celebration',
+    location: 'Indoor venue',
+    client: 'Private celebration',
+    desc: 'Guests celebrate together in front of a floral wedding stage with warm chandeliers and a black backdrop.'
   },
   {
     id: 4,
-    title: 'Traditional Gold & Orchid Canopy',
-    category: 'Weddings',
-    image: '/decor-details.jpg',
-    date: 'February 2026',
-    location: 'Raviz Ashtamudi, Kollam, Kerala',
-    client: 'Dr. Nair & Family',
-    desc: 'Luxury table settings featuring fine crystal glassware, traditional brass lamps, gold centerpiece stands, and center arrangements composed of white roses and orchids.'
+    title: 'Illuminated Event Entrance',
+    category: 'Decorations',
+    image: '/gallery/weddings/event-14.jpg',
+    date: 'Evening event',
+    location: 'Auditorium entrance',
+    client: 'Private celebration',
+    desc: 'A red-carpet entrance tunnel defined by warm geometric light frames and decorative light installations.'
   },
   {
     id: 5,
-    title: 'Kerala Business Awards & Gala',
-    category: 'Corporate',
-    image: '/hero-bg.jpg',
-    date: 'November 2025',
-    location: 'Le Meridien, Kochi, Kerala',
-    client: 'Kerala Financial Services',
-    desc: 'A premium corporate gala dinner celebrating top achievers. Structured glass walkways, custom stage design, media wall photo ops, and live entertainment stages.'
+    title: 'Pastel Floral Birthday Stage',
+    category: 'Decorations',
+    image: '/gallery/decorations/event-17.jpg',
+    date: 'Birthday celebration',
+    location: 'Indoor venue',
+    client: 'Private celebration',
+    desc: 'A pastel floral stage with a personalised backdrop, white table setting, lanterns, and soft string lights.'
   },
   {
     id: 6,
-    title: 'Pulse Arena Kochi Concert Tour',
-    category: 'Concerts',
-    image: '/concert.jpg',
-    date: 'April 2026',
-    location: 'Kaloor Stadium Ground, Kochi, Kerala',
-    client: 'Pulse Music Group',
-    desc: 'Grand concert show layout built for 15,000 attendees, complete with safety barricades, VIP lounges, local government permits, and stage safety compliance inspections.'
+    title: 'Pastel Floral Backdrop Detail',
+    category: 'Decorations',
+    image: '/gallery/decorations/event-18.jpg',
+    date: 'Birthday celebration',
+    location: 'Indoor venue',
+    client: 'Private celebration',
+    desc: 'A close view of the pastel floral arrangement and illuminated personalised sign on the celebration backdrop.'
   }
 ];
 
-const categories = ['All', 'Weddings', 'Corporate', 'Concerts'];
+const categories = ['All', 'Weddings', 'Decorations'];
 
 export default function PortfolioPage() {
   const [activeFilter, setActiveFilter] = useState('All');

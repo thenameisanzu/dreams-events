@@ -18,7 +18,7 @@ export const servicesData: Service[] = [
     desc: 'From grand traditional celebrations to bespoke destination weddings in Kumarakom and Kochi. We manage visual layouts, floral mandaps, and logistics.',
     icon: Heart,
     color: '#EC4899', // Pink
-    image: '/hero-bg.jpg',
+    image: '/gallery/weddings/event-05.jpg',
     features: [
       'Floral Mandap & Canopy Decors',
       'Destination Wedding Logistics',
@@ -34,7 +34,7 @@ export const servicesData: Service[] = [
     desc: 'Vibrant themed birthday parties, domestic anniversary setups, and intimate family gatherings with playful details, photo booths, and balloon decor.',
     icon: Cake,
     color: '#F59E0B', // Amber
-    image: '/decor-details.jpg',
+    image: '/gallery/birthdays/event-02.jpg',
     features: [
       'Creative Balloon Sculptures',
       'Themed Visual Photo Backdrops',
@@ -50,7 +50,7 @@ export const servicesData: Service[] = [
     desc: 'Professional seminars, annual general meetings, and corporate award shows. We coordinate audio-visual arrays, VIP lounges, and runtime schedules.',
     icon: Briefcase,
     color: '#8B5CF6', // Violet
-    image: '/corporate.jpg',
+    image: '/gallery/decorations/event-15.jpg',
     features: [
       'High-End Sound & Mic Arrays',
       'Keynote & Presentation Rigs',
@@ -66,7 +66,7 @@ export const servicesData: Service[] = [
     desc: 'High-energy live music concerts, traditional classical festivals, and public stage dramas with professional trusses, pyro setups, and sound systems.',
     icon: Mic,
     color: '#3B82F6', // Blue
-    image: '/concert.jpg',
+    image: '/gallery/decorations/event-08.jpg',
     features: [
       'Heavy-Duty Stage Truss Rigging',
       'Epic Line Array Sound Systems',
@@ -82,7 +82,7 @@ export const servicesData: Service[] = [
     desc: 'Bespoke stage styling, ceiling floral installations, elegant fabric drapes, light design concepts, and pathway gates for premium events.',
     icon: Sparkles,
     color: '#10B981', // Emerald
-    image: '/decor-details.jpg',
+    image: '/gallery/decorations/event-01.jpg',
     features: [
       'Fresh Floral Ceiling Layouts',
       'Glassmorphic Arch Gateways',
@@ -98,7 +98,7 @@ export const servicesData: Service[] = [
     desc: 'Complete event coordination from venue selection audits to checklist tracking, vendor management, schedule designs, and budget reviews.',
     icon: Calendar,
     color: '#EF4444', // Red
-    image: '/hero-bg.jpg',
+    image: '/gallery/weddings/event-05.jpg',
     features: [
       'Venue Contract Feasibility Audits',
       'Vendor Deal & Fee Negotiations',
@@ -114,7 +114,7 @@ export const servicesData: Service[] = [
     desc: 'Creative customized events. We plan concepts, design props, build custom backdrops, and coordinate outfits to execute a complete themed experience.',
     icon: Palette,
     color: '#8B5CF6', // Violet
-    image: '/corporate.jpg',
+    image: '/gallery/decorations/event-17.jpg',
     features: [
       'Bespoke Theme Prop Construction',
       'Immersive Backdrop Screen Sets',

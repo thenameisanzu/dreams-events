@@ -252,16 +252,44 @@
 /* Responsiveness */
 @media (max-width: 768px) {
   .header {
-    padding: 1.25rem 1.5rem;
+    padding: 1rem 1.25rem;
   }
   .scrolled {
-    padding: 0.95rem 1.5rem;
+    padding: 0.8rem 1.25rem;
   }
   .nav {
     display: none;
   }
   .menuToggle {
     display: block;
+  }
+
+  .logo {
+    gap: 0.5rem;
+  }
+
+  .logoTitle {
+    font-size: 1.15rem;
+  }
+
+  .logoImageWrapper {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .nav {
+    gap: 1.25rem;
+  }
+
+  .navList {
+    gap: 1.25rem;
+  }
+
+  .ctaBtn {
+    padding: 0.6rem 1rem;
+    font-size: 0.8rem;
   }
 }
 

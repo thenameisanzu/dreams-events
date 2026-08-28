@@ -37,8 +37,8 @@ export default function Hero() {
         transition={{ duration: 2.5, ease: 'easeOut' }}
       >
         <Image
-          src="/hero-bg.jpg"
-          alt="Luxury wedding reception decoration and floral setup"
+          src="/gallery/weddings/event-05.jpg"
+          alt="Ivory and blush floral wedding stage under a draped canopy"
           fill
           priority
           sizes="100vw"

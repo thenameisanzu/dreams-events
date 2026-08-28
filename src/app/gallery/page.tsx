@@ -9,7 +9,7 @@ import Footer from '@/components/Footer';
 import { galleryItems } from '@/data/galleryData';
 import styles from './gallery.module.css';
 
-const categories = ['All', 'Weddings', 'Birthdays', 'Corporate', 'Concerts', 'Decorations'];
+const categories = ['All', 'Weddings', 'Birthdays', 'Decorations'];
 
 export default function GalleryPage() {
   const [activeFilter, setActiveFilter] = useState('All');

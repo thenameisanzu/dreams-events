@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${outfit.variable} ${plusJakartaSans.variable}`}>
+    <html lang="en" suppressHydrationWarning className={`${outfit.variable} ${plusJakartaSans.variable}`}>
       <head>
         <script
           dangerouslySetInnerHTML={{
@@ -31,6 +31,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
                 try {
                   var theme = localStorage.getItem('theme') || 'dark';
                   document.documentElement.setAttribute('data-theme', theme);
+                  document.documentElement.classList.remove('dark', 'light');
                   document.documentElement.classList.add(theme);
                 } catch (e) {}
               })();

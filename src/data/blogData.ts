@@ -16,7 +16,7 @@ export const blogPosts: BlogPost[] = [
     category: 'Weddings',
     author: 'Aishwarya Sen',
     date: 'August 24, 2026',
-    image: '/hero-bg.jpg',
+    image: '/gallery/weddings/event-06.jpg',
     excerpt: 'Discover how we combine floating floral ceilings, custom mandaps, and ambient LED uplighting to transform raw palace grounds into magical destinations.',
     content: `Destination weddings are more than just a ceremony; they are an immersive multi-day experience for your guests. As visual planners, we focus heavily on the spatial architecture of the venue.
 
@@ -32,7 +32,7 @@ Finally, materials must be premium. We source high-grade silks for drapes and fr
     category: 'Concerts',
     author: 'Kabir Mehta',
     date: 'July 15, 2026',
-    image: '/concert.jpg',
+    image: '/gallery/decorations/event-16.jpg',
     excerpt: 'A detailed production breakdown of rigging calculations, crowd safety barriers, local permits, and audio engineering checklists.',
     content: `Rigging safety and structural stability calculations are the backbone of any large-scale arena show. When dealing with tons of audio arrays, lighting trusses, and pyro pods suspended above a crowd, there is zero margin for error.
 
@@ -46,7 +46,7 @@ Lastly, licensing is a major operational phase. Event managers must coordinate w
     category: 'Corporate',
     author: 'Rohan Malhotra',
     date: 'June 30, 2026',
-    image: '/corporate.jpg',
+    image: '/gallery/decorations/event-11.jpg',
     excerpt: 'How high-definition curved LED walls, hybrid presenter layouts, and digital RFID registration terminals are changing corporate galas.',
     content: `The days of low-contrast projector screens and simple podiums are long gone. Modern corporate events require high-impact visual technology and dynamic staging.
 

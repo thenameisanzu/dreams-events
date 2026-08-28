@@ -1,0 +1,276 @@
+.section {
+  padding: 8rem 2rem;
+  background: linear-gradient(180deg, rgba(139, 92, 246, 0.04), rgba(16, 185, 129, 0.02));
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.badge {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--primary);
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.title {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.titleAccent {
+  background: linear-gradient(135deg, var(--secondary) 0%, var(--accent-pink) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.desc {
+  max-width: 700px;
+  margin: 0 auto;
+  color: var(--text-secondary);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-auto-rows: 110px;
+  gap: 1.25rem;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 28px;
+  border: 1px solid var(--card-border);
+  background: var(--card-bg);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, var(--shadow-opacity));
+  min-height: 240px;
+}
+
+.card.wide {
+  grid-column: span 6;
+  grid-row: span 2;
+}
+
+.card.tall {
+  grid-column: span 3;
+  grid-row: span 3;
+}
+
+.card.square {
+  grid-column: span 3;
+  grid-row: span 2;
+}
+
+.imageButton {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.imageWrap {
+  position: absolute;
+  inset: 0;
+}
+
+.imageWrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: saturate(1.08) contrast(1.04);
+  transform: scale(1.02);
+  transition: transform 0.6s ease;
+}
+
+.card:hover .imageWrap img {
+  transform: scale(1.08);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.5rem;
+  background: linear-gradient(180deg, rgba(7, 10, 18, 0.1) 0%, rgba(7, 10, 18, 0.82) 100%);
+}
+
+.meta {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.82);
+  margin-bottom: 0.75rem;
+}
+
+.overlay h3 {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: clamp(1.2rem, 2vw, 2rem);
+  color: #fff;
+  max-width: 14ch;
+}
+
+.lightboxBackdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(7, 10, 18, 0.8);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  z-index: 1000;
+}
+
+.lightbox {
+  position: relative;
+  width: min(980px, 92vw);
+  max-height: 90vh;
+  border-radius: 28px;
+  overflow: hidden;
+  background: rgba(17, 17, 22, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.45);
+}
+
+.lightboxImage {
+  display: block;
+  width: 100%;
+  max-height: 72vh;
+  object-fit: cover;
+}
+
+.lightboxContent {
+  padding: 1.25rem 1.5rem 1.5rem;
+  background: rgba(17, 17, 22, 0.95);
+}
+
+.lightboxMeta {
+  display: inline-block;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--secondary);
+  margin-bottom: 0.5rem;
+}
+
+.lightboxContent h3 {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: clamp(1.4rem, 2vw, 2rem);
+  color: #fff;
+}
+
+.closeButton {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(17, 17, 22, 0.75);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: 200px;
+  }
+
+  .card {
+    min-height: 220px;
+  }
+
+  .card.wide {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  .card.tall,
+  .card.square {
+    grid-column: span 1;
+    grid-row: span 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 6rem 1.5rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 260px;
+  }
+
+  .card.wide,
+  .card.tall,
+  .card.square {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .overlay {
+    padding: 1.25rem;
+  }
+
+  .overlay h3 {
+    font-size: 1.5rem;
+  }
+
+  .lightboxBackdrop {
+    padding: 1rem;
+  }
+
+  .lightbox {
+    width: min(700px, 94vw);
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    margin-bottom: 2.5rem;
+  }
+
+  .grid {
+    grid-auto-rows: 220px;
+  }
+
+  .lightboxContent {
+    padding: 1rem 1rem 1.25rem;
+  }
+
+  .closeButton {
+    width: 36px;
+    height: 36px;
+    top: 0.75rem;
+    right: 0.75rem;
+  }
+}
