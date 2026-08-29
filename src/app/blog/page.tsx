@@ -9,92 +9,182 @@ import Footer from '@/components/Footer';
 import { blogPosts } from '@/data/blogData';
 import styles from './blog.module.css';
 
-const categories = ['All', 'Weddings', 'Corporate', 'Concerts'];
+const categories = ['All', 'Weddings', 'Birthdays', 'Decorations'];
 
 export default function BlogIndexPage() {
   const [activeFilter, setActiveFilter] = useState('All');
 
-  const filteredPosts = activeFilter === 'All'
-    ? blogPosts
-    : blogPosts.filter(post => post.category === activeFilter);
+  const filteredPosts =
+    activeFilter === 'All'
+      ? blogPosts
+      : blogPosts.filter((post) => post.category === activeFilter);
 
   return (
     <div className={styles.page}>
       <Header />
 
-      {/* Blog Hero */}
+      {/* =========================
+          BLOG HERO
+      ========================== */}
       <section className={styles.hero}>
         <div className={styles.heroContainer}>
-          <span className={styles.badge}>Dreams Insights</span>
+          <span className={styles.badge}>Dreams Journal</span>
+
           <h1 className={styles.title}>
-            Event Planning & <span className={styles.titleAccent}>Design Guide</span>
+            Ideas, Inspiration &{' '}
+            <span className={styles.titleAccent}>Celebrations</span>
           </h1>
+
           <p className={styles.subtitle}>
-            Read behind-the-scenes breakdowns of luxury event staging, wedding themes, laser maps, and production checklists.
+            Discover ideas, decoration inspiration, celebration themes, and
+            behind-the-scenes stories from events created by Dreams.
           </p>
         </div>
+
         <div className="grid-bg" />
       </section>
 
-      {/* Filter and Grid Content */}
+      {/* =========================
+          BLOG CONTENT
+      ========================== */}
       <section className={styles.content}>
+
+        {/* Category Filters */}
         <div className={styles.filterBar}>
-          {categories.map((cat) => (
+          {categories.map((category) => (
             <button
-              key={cat}
-              className={`${styles.filterBtn} ${activeFilter === cat ? styles.filterBtnActive : ''}`}
-              onClick={() => setActiveFilter(cat)}
+              key={category}
+              type="button"
+              className={`${styles.filterBtn} ${activeFilter === category
+                  ? styles.filterBtnActive
+                  : ''
+                }`}
+              onClick={() => setActiveFilter(category)}
             >
-              {cat}
+              {category}
             </button>
           ))}
         </div>
 
-        {/* Gallery Grid */}
+        {/* Blog Grid */}
         <motion.div layout className={styles.grid}>
           <AnimatePresence mode="popLayout">
             {filteredPosts.map((post) => {
-              const wordCount = post.content ? post.content.split(/\s+/).length : 120;
-              const readTime = Math.ceil(wordCount / 200) + ' min read';
+              const wordCount = post.content
+                ? post.content.split(/\s+/).length
+                : 120;
+
+              const readTime =
+                Math.max(1, Math.ceil(wordCount / 200)) + ' min read';
 
               return (
                 <motion.article
                   key={post.id}
                   layout
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.95 }}
-                  transition={{ duration: 0.4 }}
+                  initial={{
+                    opacity: 0,
+                    y: 20,
+                  }}
+                  animate={{
+                    opacity: 1,
+                    y: 0,
+                  }}
+                  exit={{
+                    opacity: 0,
+                    y: 20,
+                  }}
+                  transition={{
+                    duration: 0.4,
+                    ease: 'easeOut',
+                  }}
                   className={styles.card}
                 >
-                  <Link href={`/blog/${post.id}`} className={styles.cardImgArea}>
+                  {/* Image */}
+                  <Link
+                    href={`/blog/${post.id}`}
+                    className={styles.cardImgArea}
+                  >
                     <Image
                       src={post.image}
                       alt={post.title}
                       fill
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      quality={80}
+                      sizes="
+                        (max-width: 768px) 100vw,
+                        (max-width: 1200px) 50vw,
+                        33vw
+                      "
+                      quality={85}
                       className={styles.cardImg}
                     />
+
+                    {/* Image Overlay */}
+                    <div className={styles.imageOverlay}>
+                      <span className={styles.imageCategory}>
+                        {post.category}
+                      </span>
+
+                      <span className={styles.readMore}>
+                        Read Story →
+                      </span>
+                    </div>
                   </Link>
+
+                  {/* Details */}
                   <div className={styles.cardDetails}>
+
+                    {/* Meta */}
                     <div className={styles.cardMeta}>
                       <span>by {post.author}</span>
-                      <span className={styles.metaDot}>•</span>
+
+                      <span className={styles.metaDot}>
+                        •
+                      </span>
+
                       <span>{post.date}</span>
-                      <span className={styles.metaDot}>•</span>
+
+                      <span className={styles.metaDot}>
+                        •
+                      </span>
+
                       <span>{readTime}</span>
                     </div>
+
+                    {/* Title */}
                     <Link href={`/blog/${post.id}`}>
-                      <h3 className={styles.cardTitle}>{post.title}</h3>
+                      <h2 className={styles.cardTitle}>
+                        {post.title}
+                      </h2>
                     </Link>
-                    <p className={styles.cardExcerpt}>{post.excerpt}</p>
+
+                    {/* Excerpt */}
+                    <p className={styles.cardExcerpt}>
+                      {post.excerpt}
+                    </p>
+
+                    {/* Read Link */}
+                    <Link
+                      href={`/blog/${post.id}`}
+                      className={styles.readLink}
+                    >
+                      Read article
+                      <span>→</span>
+                    </Link>
                   </div>
                 </motion.article>
               );
             })}
           </AnimatePresence>
         </motion.div>
+
+        {/* Empty State */}
+        {filteredPosts.length === 0 && (
+          <div className={styles.emptyState}>
+            <h3>No stories found</h3>
+            <p>
+              We don't have any articles in this category yet.
+            </p>
+          </div>
+        )}
       </section>
 
       <Footer />

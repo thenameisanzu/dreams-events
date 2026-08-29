@@ -47,7 +47,7 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
-  grid-auto-rows: 110px;
+  grid-template-rows: repeat(4, 160px);
   gap: 1.25rem;
 }
 
@@ -58,22 +58,7 @@
   border: 1px solid var(--card-border);
   background: var(--card-bg);
   box-shadow: 0 20px 40px rgba(0, 0, 0, var(--shadow-opacity));
-  min-height: 240px;
-}
-
-.card.wide {
-  grid-column: span 6;
-  grid-row: span 2;
-}
-
-.card.tall {
-  grid-column: span 3;
-  grid-row: span 3;
-}
-
-.card.square {
-  grid-column: span 3;
-  grid-row: span 2;
+  min-height: 0;
 }
 
 .imageButton {
@@ -201,22 +186,13 @@
 @media (max-width: 1024px) {
   .grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-auto-rows: 200px;
+    grid-template-rows: none;
+    grid-auto-rows: 220px;
   }
 
   .card {
-    min-height: 220px;
-  }
-
-  .card.wide {
-    grid-column: span 2;
-    grid-row: span 2;
-  }
-
-  .card.tall,
-  .card.square {
-    grid-column: span 1;
-    grid-row: span 2;
+    grid-column: auto !important;
+    grid-row: auto !important;
   }
 }
 
@@ -227,14 +203,13 @@
 
   .grid {
     grid-template-columns: 1fr;
+    grid-template-rows: none;
     grid-auto-rows: 260px;
   }
 
-  .card.wide,
-  .card.tall,
-  .card.square {
-    grid-column: auto;
-    grid-row: auto;
+  .card {
+    grid-column: auto !important;
+    grid-row: auto !important;
   }
 
   .overlay {

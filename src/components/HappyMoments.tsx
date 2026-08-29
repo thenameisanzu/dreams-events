@@ -10,37 +10,43 @@ const moments = [
     title: 'Rose-petal wedding celebration',
     meta: 'Wedding celebration',
     image: '/gallery/weddings/event-03.jpg',
-    layout: 'wide',
+    gridCol: '1 / 7',
+    gridRow: '1 / 3',
   },
   {
-    title: 'Floral reception stage',
+    title: 'Floral reception stage with fairy lights',
     meta: 'Wedding décor',
     image: '/gallery/birthdays/event-12.jpg',
-    layout: 'tall',
+    gridCol: '7 / 10',
+    gridRow: '1 / 4',
   },
   {
-    title: 'White floral cake stage',
+    title: 'White rose chandeliers venue',
     meta: 'Ceremony décor',
     image: '/gallery/decorations/event-09.jpg',
-    layout: 'square',
+    gridCol: '10 / 13',
+    gridRow: '1 / 3',
   },
   {
-    title: 'Pastel baby shower dessert table',
+    title: 'Pastel swan christening dessert table',
     meta: 'Baby shower',
     image: '/gallery/decorations/event-11.jpg',
-    layout: 'square',
+    gridCol: '1 / 4',
+    gridRow: '3 / 5',
   },
   {
-    title: 'Ivory and blush floral stage',
+    title: 'Ivory arch stage with blush florals',
     meta: 'Wedding décor',
     image: '/gallery/weddings/event-05.jpg',
-    layout: 'wide',
+    gridCol: '4 / 10',
+    gridRow: '3 / 5',
   },
   {
-    title: 'Princess-themed first birthday',
+    title: "Mutha's princess first birthday",
     meta: 'Birthday celebration',
     image: '/gallery/decorations/event-16.jpg',
-    layout: 'tall',
+    gridCol: '10 / 13',
+    gridRow: '3 / 5',
   },
 ];
 
@@ -65,7 +71,11 @@ export default function HappyMoments() {
             {moments.map((moment, index) => (
               <motion.article
                 key={`${moment.title}-${index}`}
-                className={`${styles.card} ${styles[moment.layout]}`}
+                className={styles.card}
+                style={{
+                  gridColumn: moment.gridCol,
+                  gridRow: moment.gridRow,
+                }}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
