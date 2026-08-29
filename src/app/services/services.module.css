@@ -4,10 +4,16 @@
   min-height: 100vh;
 }
 
+/* =========================
+   HERO
+========================= */
+
 .hero {
   position: relative;
   padding: 10rem 2rem 5rem;
-  background: linear-gradient(180deg, rgba(139, 92, 246, 0.05) 0%, transparent 100%);
+  background: linear-gradient(180deg,
+      rgba(139, 92, 246, 0.05) 0%,
+      transparent 100%);
   text-align: center;
   overflow: hidden;
 }
@@ -35,10 +41,13 @@
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 800;
   margin-bottom: 1.5rem;
+  line-height: 1.15;
 }
 
 .titleAccent {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--accent-pink) 100%);
+  background: linear-gradient(135deg,
+      var(--primary) 0%,
+      var(--accent-pink) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -49,14 +58,23 @@
   line-height: 1.6;
 }
 
+/* =========================
+   CONTENT
+========================= */
+
 .content {
   max-width: 1200px;
   margin: 0 auto;
   padding: 4rem 2rem 8rem;
+
   display: flex;
   flex-direction: column;
   gap: 8rem;
 }
+
+/* =========================
+   SERVICE BLOCK
+========================= */
 
 .serviceBlock {
   display: grid;
@@ -66,12 +84,29 @@
   scroll-margin-top: 100px;
 }
 
+/*
+   NORMAL DESKTOP
+
+   IMAGE | TEXT
+*/
+
+/* =========================
+   REVERSE SERVICE
+========================= */
+
 .serviceBlockReverse {
   grid-template-columns: 1.1fr 1fr;
 }
 
+/*
+   REVERSE DESKTOP
+
+   TEXT | IMAGE
+*/
+
 .serviceBlockReverse .imageWrapper {
   grid-column: 2;
+  grid-row: 1;
 }
 
 .serviceBlockReverse .textWrapper {
@@ -79,23 +114,37 @@
   grid-row: 1;
 }
 
+/* =========================
+   IMAGE
+========================= */
+
 .imageWrapper {
   position: relative;
-  aspect-ratio: 16/10;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+
   border-radius: 24px;
   overflow: hidden;
+
   border: 1px solid rgba(255, 255, 255, 0.05);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
 .serviceImage {
   object-fit: cover;
+
   transition: var(--transition-slow);
 }
 
 .serviceBlock:hover .serviceImage {
   transform: scale(1.03);
 }
+
+/* =========================
+   TEXT
+========================= */
 
 .textWrapper {
   display: flex;
@@ -106,98 +155,349 @@
   display: flex;
   align-items: center;
   gap: 0.75rem;
+
   color: var(--primary);
+
   margin-bottom: 1rem;
 }
 
 .serviceTitle {
   font-family: var(--font-outfit), sans-serif;
+
   font-size: clamp(1.75rem, 3vw, 2.25rem);
   font-weight: 800;
+
   color: var(--text-primary);
+
   margin-bottom: 1.25rem;
+
+  line-height: 1.2;
 }
 
 .serviceDesc {
   color: var(--text-secondary);
+
   line-height: 1.7;
+
   margin-bottom: 2rem;
+
   font-size: 1.02rem;
 }
 
+/* =========================
+   FEATURES
+========================= */
+
 .featuresList {
   list-style: none;
+
   display: grid;
   grid-template-columns: 1fr 1fr;
+
   gap: 1rem;
+
   margin-bottom: 2.5rem;
+
+  padding: 0;
 }
 
 .featureItem {
   display: flex;
   align-items: center;
+
   gap: 0.5rem;
+
   font-size: 0.95rem;
+
   color: var(--text-secondary);
 }
 
 .featureIcon {
   color: var(--primary);
+
   flex-shrink: 0;
 }
 
+/* =========================
+   CTA
+========================= */
+
 .ctaBtn {
   align-self: flex-start;
+
   font-family: var(--font-outfit), sans-serif;
+
   font-size: 0.95rem;
   font-weight: 600;
+
   padding: 0.9rem 2rem;
+
   border-radius: 50px;
+
   background: var(--input-bg);
+
   color: var(--text-primary);
+
   border: 1px solid var(--glass-border);
+
   cursor: pointer;
+
   transition: var(--transition-smooth);
 }
 
 .ctaBtn:hover {
   background: var(--primary);
+
   color: #fff;
+
   border-color: var(--primary);
-  box-shadow: 0 5px 15px rgba(139, 92, 246, 0.35);
+
+  box-shadow:
+    0 5px 15px rgba(139, 92, 246, 0.35);
+
   transform: translateY(-2px);
 }
 
-/* Responsiveness */
-@media (max-width: 992px) {
-  .serviceBlock {
-    grid-template-columns: 1fr;
-    gap: 3rem;
+/* =========================================================
+   IPAD / TABLET
+   <= 1024px
+
+   ALWAYS:
+
+   IMAGE
+      ↓
+   DESCRIPTION
+========================================================= */
+
+@media (max-width: 1024px) {
+  .content {
+    padding: 4rem 1.5rem 7rem;
+    gap: 6rem;
   }
+
+  .serviceBlock,
   .serviceBlockReverse {
+    display: grid;
+
     grid-template-columns: 1fr;
+
+    gap: 2.5rem;
   }
+
+  /*
+     NORMAL SERVICE
+
+     IMAGE FIRST
+  */
+
+  .serviceBlock .imageWrapper {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .serviceBlock .textWrapper {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  /*
+     REVERSE SERVICE
+
+     RESET DESKTOP ORDER
+
+     IMAGE FIRST
+  */
+
   .serviceBlockReverse .imageWrapper {
     grid-column: 1;
+    grid-row: 1;
   }
+
   .serviceBlockReverse .textWrapper {
     grid-column: 1;
+    grid-row: 2;
   }
+
   .imageWrapper {
-    aspect-ratio: 16/9;
+    aspect-ratio: 16 / 9;
+
+    border-radius: 22px;
   }
+
   .featuresList {
-    grid-template-columns: 1fr;
-    gap: 0.75rem;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 0.9rem;
   }
 }
+
+/* =========================================================
+   MOBILE
+   <= 768px
+
+   ALWAYS:
+
+   IMAGE
+      ↓
+   DESCRIPTION
+========================================================= */
 
 @media (max-width: 768px) {
   .hero {
     padding: 8rem 1.5rem 4rem;
   }
+
+  .heroContainer {
+    max-width: 650px;
+  }
+
+  .title {
+    font-size: clamp(2.25rem, 9vw, 3.2rem);
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
   .content {
     padding: 2rem 1.5rem 6rem;
-    gap: 6rem;
+
+    gap: 5rem;
+  }
+
+  .serviceBlock,
+  .serviceBlockReverse {
+    grid-template-columns: 1fr;
+
+    gap: 2rem;
+  }
+
+  /*
+     FORCE IMAGE FIRST
+     FOR BOTH NORMAL + REVERSE
+  */
+
+  .serviceBlock .imageWrapper,
+  .serviceBlockReverse .imageWrapper {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .serviceBlock .textWrapper,
+  .serviceBlockReverse .textWrapper {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .imageWrapper {
+    aspect-ratio: 16 / 10;
+
+    border-radius: 20px;
+  }
+
+  .serviceTitle {
+    font-size: 1.75rem;
+
+    margin-bottom: 1rem;
+  }
+
+  .serviceDesc {
+    font-size: 0.95rem;
+
+    line-height: 1.65;
+
+    margin-bottom: 1.5rem;
+  }
+
+  .featuresList {
+    grid-template-columns: 1fr;
+
+    gap: 0.75rem;
+
+    margin-bottom: 2rem;
+  }
+
+  .featureItem {
+    font-size: 0.9rem;
+  }
+
+  .ctaBtn {
+    font-size: 0.9rem;
+
+    padding: 0.85rem 1.75rem;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   <= 480px
+========================================================= */
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 7rem 1rem 3.5rem;
+  }
+
+  .badge {
+    font-size: 0.72rem;
+
+    letter-spacing: 0.08em;
+  }
+
+  .title {
+    font-size: 2.15rem;
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
+  }
+
+  .content {
+    padding: 1.5rem 1rem 5rem;
+
+    gap: 4rem;
+  }
+
+  .serviceBlock,
+  .serviceBlockReverse {
+    gap: 1.5rem;
+  }
+
+  .imageWrapper {
+    aspect-ratio: 4 / 3;
+
+    border-radius: 18px;
+  }
+
+  .serviceHeader {
+    gap: 0.5rem;
+
+    margin-bottom: 0.75rem;
+  }
+
+  .serviceTitle {
+    font-size: 1.5rem;
+  }
+
+  .serviceDesc {
+    font-size: 0.9rem;
+
+    line-height: 1.6;
+  }
+
+  .featureItem {
+    font-size: 0.85rem;
+
+    align-items: flex-start;
+  }
+
+  .featureIcon {
+    margin-top: 3px;
+  }
+
+  .ctaBtn {
+    width: 100%;
+
+    text-align: center;
   }
 }
