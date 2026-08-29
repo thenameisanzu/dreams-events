@@ -1,0 +1,153 @@
+/* =========================================
+   HIDE NATIVE CURSOR GLOBALLY
+   (applied via globals.css too, but
+    scoping here keeps it self-contained)
+========================================= */
+
+/* Custom Cursor — hides the real cursor site-wide */
+:global(html) {
+  cursor: none !important;
+}
+
+:global(*) {
+  cursor: none !important;
+}
+
+
+/* =========================================
+   SHARED BASE LAYER
+========================================= */
+
+.dot,
+.ring {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  /* Sit above everything */
+  z-index: 99999;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  will-change: transform;
+}
+
+
+/* =========================================
+   DOT  — precise, instant
+========================================= */
+
+.dot {
+  width: 8px;
+  height: 8px;
+
+  background: #fff;
+
+  mix-blend-mode: difference;
+
+  transition:
+    width   0.2s ease,
+    height  0.2s ease,
+    opacity 0.25s ease;
+}
+
+.dotHover {
+  /* Shrink to a point on links/buttons */
+  width:  4px;
+  height: 4px;
+
+  opacity: 0.6;
+}
+
+.dotClick {
+  width:  5px;
+  height: 5px;
+
+  opacity: 0.4;
+}
+
+
+/* =========================================
+   RING  — lagging, trailing
+========================================= */
+
+.ring {
+  width:  38px;
+  height: 38px;
+
+  border: 1.5px solid rgba(255, 255, 255, 0.55);
+
+  background: transparent;
+
+  mix-blend-mode: difference;
+
+  transition:
+    width       0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    height      0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.3s ease,
+    opacity     0.3s ease,
+    background  0.3s ease;
+}
+
+.ringHover {
+  width:  64px;
+  height: 64px;
+
+  border-color: rgba(64, 180, 220, 0.7);
+
+  background: rgba(64, 180, 220, 0.06);
+}
+
+.ringClick {
+  width:  28px;
+  height: 28px;
+
+  border-color: rgba(255, 255, 255, 0.9);
+
+  background: rgba(255, 255, 255, 0.05);
+}
+
+
+/* =========================================
+   VISIBILITY
+========================================= */
+
+.hidden {
+  opacity: 0 !important;
+  transition:
+    opacity 0.2s ease,
+    width   0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    height  0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+
+/* =========================================
+   TOUCH DEVICES — hide entirely
+========================================= */
+
+@media (pointer: coarse) {
+  .dot,
+  .ring {
+    display: none;
+  }
+
+  /* Restore cursor on touch */
+  :global(html),
+  :global(*) {
+    cursor: auto !important;
+  }
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .ring {
+    transition: none;
+  }
+}
