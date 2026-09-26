@@ -18,7 +18,7 @@ const moments = [
     meta: 'Wedding décor',
     image: '/gallery/birthdays/event-12.jpg',
     gridCol: '7 / 10',
-    gridRow: '1 / 4',
+    gridRow: '1 / 3',
   },
   {
     title: 'White rose chandeliers venue',

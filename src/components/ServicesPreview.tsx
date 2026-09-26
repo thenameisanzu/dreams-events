@@ -58,8 +58,15 @@ export default function ServicesPreview() {
                   '--primary': service.color,
                 } as React.CSSProperties}
               >
-                <div className={styles.iconWrapper}>
-                  <IconComponent size={28} />
+                <div
+                  className={styles.iconWrapper}
+                  style={{
+                    color: service.color,
+                    backgroundColor: `${service.color}15`,
+                    borderColor: `${service.color}35`,
+                  }}
+                >
+                  <IconComponent size={26} />
                 </div>
                 <h3 className={styles.cardTitle}>{service.title}</h3>
                 <p className={styles.cardDesc}>{service.desc}</p>

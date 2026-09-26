@@ -18,7 +18,7 @@
 
 .header {
   text-align: center;
-  margin-bottom: 5rem;
+  margin-bottom: 4.5rem;
 }
 
 .badge {
@@ -27,336 +27,86 @@
   font-weight: 600;
   text-transform: uppercase;
   color: var(--primary);
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   margin-bottom: 1rem;
-  display: block;
+  display: inline-block;
+  padding: 0.4rem 1.1rem;
+  background: var(--primary-glow);
+  border-radius: 50px;
+  border: 1px solid rgba(139, 92, 246, 0.2);
 }
 
 .title {
   font-family: var(--font-outfit), sans-serif;
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(2.2rem, 4.5vw, 3.2rem);
   font-weight: 800;
   color: var(--text-primary);
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
   line-height: 1.2;
 }
 
 .titleAccent {
-  background: linear-gradient(135deg,
-      var(--secondary) 0%,
-      #34d399 100%);
+  background: var(--title-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .desc {
-  max-width: 600px;
+  max-width: 650px;
   margin: 0 auto;
   color: var(--text-secondary);
-  line-height: 1.6;
+  line-height: 1.7;
+  font-size: 1.05rem;
 }
 
 /* =========================
-   SERVICES
+   SERVICES GRID
 ========================= */
 
 .grid {
-  display: flex;
-  flex-direction: column;
-  gap: 5rem;
-}
-
-/* =========================
-   SERVICE ITEM
-========================= */
-
-.serviceItem {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: 4rem;
-  align-items: center;
-}
-
-/*
-   DESKTOP DEFAULT
-
-   IMAGE | CONTENT
-*/
-
-.imageWrapper {
-  order: 1;
-}
-
-.content {
-  order: 2;
-}
-
-/*
-   DESKTOP EVEN ITEMS
-
-   CONTENT | IMAGE
-
-   Service 2
-   Service 4
-   Service 6...
-*/
-
-.serviceItem:nth-child(even) .imageWrapper {
-  order: 2;
-}
-
-.serviceItem:nth-child(even) .content {
-  order: 1;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
 }
 
 /* =========================
-   IMAGE WRAPPER
-========================= */
-
-.imageWrapper {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 4 / 3;
-
-  overflow: hidden;
-
-  border-radius: 24px;
-
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-
-  box-shadow:
-    0 15px 40px rgba(0, 0, 0, var(--shadow-opacity));
-
-  transition: var(--transition-slow);
-}
-
-.imageWrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-
-  transition:
-    transform 0.7s ease,
-    filter 0.7s ease;
-}
-
-.serviceItem:hover .imageWrapper img {
-  transform: scale(1.05);
-}
-
-.serviceItem:hover .imageWrapper {
-  border-color: var(--card-hover-border);
-}
-
-/* =========================
-   CONTENT
-========================= */
-
-.content {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-/* =========================
-   SERVICE BADGE
-========================= */
-
-.serviceBadge {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-
-  font-family: var(--font-outfit), sans-serif;
-  font-size: 0.85rem;
-  font-weight: 600;
-
-  color: var(--primary);
-
-  margin-bottom: 1rem;
-}
-
-.serviceBadge svg {
-  width: 16px;
-  height: 16px;
-  flex-shrink: 0;
-}
-
-/* =========================
-   SERVICE TITLE
-========================= */
-
-.cardTitle {
-  font-family: var(--font-outfit), sans-serif;
-  font-size: clamp(1.6rem, 3vw, 2.2rem);
-  font-weight: 700;
-
-  color: var(--text-primary);
-
-  line-height: 1.2;
-
-  margin-bottom: 1rem;
-}
-
-/* =========================
-   SERVICE DESCRIPTION
-========================= */
-
-.cardDesc {
-  font-size: 0.95rem;
-
-  color: var(--text-secondary);
-
-  line-height: 1.7;
-
-  max-width: 560px;
-
-  margin-bottom: 2rem;
-}
-
-/* =========================
-   SERVICE LIST
-========================= */
-
-.serviceList {
-  display: flex;
-  flex-direction: column;
-
-  gap: 0.75rem;
-
-  margin: 0 0 2rem;
-  padding: 0;
-
-  list-style: none;
-}
-
-.serviceList li {
-  display: flex;
-  align-items: center;
-
-  gap: 0.65rem;
-
-  font-size: 0.9rem;
-
-  color: var(--text-secondary);
-}
-
-.serviceList li svg {
-  width: 14px;
-  height: 14px;
-
-  flex-shrink: 0;
-
-  color: var(--primary);
-}
-
-/* =========================
-   SERVICE BUTTON
-========================= */
-
-.cardLink {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  gap: 0.5rem;
-
-  font-family: var(--font-outfit), sans-serif;
-
-  font-size: 0.9rem;
-  font-weight: 600;
-
-  color: var(--text-primary);
-
-  background: var(--input-bg);
-
-  border: 1px solid var(--glass-border);
-
-  padding: 0.85rem 1.5rem;
-
-  border-radius: 50px;
-
-  transition: var(--transition-smooth);
-}
-
-.cardLink svg {
-  transition: var(--transition-smooth);
-}
-
-.cardLink:hover {
-  color: #fff;
-
-  background: var(--primary);
-
-  border-color: var(--primary);
-
-  transform: translateY(-2px);
-
-  box-shadow:
-    0 8px 20px rgba(139, 92, 246, 0.25);
-}
-
-.cardLink:hover svg {
-  transform: translateX(4px);
-}
-
-/* =========================
-   OLD CARD STYLE
-   Keep if used elsewhere
+   CARD DESIGN
 ========================= */
 
 .card {
   background: var(--card-bg);
-
   border: 1px solid var(--card-border);
-
   border-radius: 24px;
-
-  padding: 3rem 2.5rem;
-
+  padding: 2.5rem 2.25rem;
   transition: var(--transition-slow);
-
   position: relative;
-
   overflow: hidden;
-
-  cursor: pointer;
-
   display: flex;
   flex-direction: column;
-
   height: 100%;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 .card::before {
   content: '';
-
   position: absolute;
-
   top: 0;
   left: 0;
-
   width: 100%;
   height: 100%;
-
-  background: radial-gradient(circle at top right,
-      rgba(139, 92, 246, 0.08) 0%,
-      transparent 60%);
-
+  background: radial-gradient(circle at top left, var(--card-hover-border, rgba(139, 92, 246, 0.15)) 0%, transparent 70%);
   opacity: 0;
-
   transition: var(--transition-smooth);
+  pointer-events: none;
 }
 
 .card:hover {
   transform: translateY(-8px);
-
   border-color: var(--card-hover-border);
-
   box-shadow:
     0 20px 40px rgba(0, 0, 0, var(--shadow-opacity)),
-    0 0 30px rgba(139, 92, 246, 0.05);
+    0 0 30px rgba(139, 92, 246, 0.08);
 }
 
 .card:hover::before {
@@ -368,35 +118,77 @@
 ========================= */
 
 .iconWrapper {
-  width: 60px;
-  height: 60px;
-
+  width: 58px;
+  height: 58px;
   border-radius: 18px;
-
-  background: var(--input-bg);
-
   display: flex;
   align-items: center;
   justify-content: center;
-
-  color: var(--primary);
-
-  margin-bottom: 2rem;
-
-  border: 1px solid var(--card-border);
-
+  margin-bottom: 1.75rem;
+  border: 1px solid;
   transition: var(--transition-smooth);
+  flex-shrink: 0;
 }
 
 .card:hover .iconWrapper {
-  background: var(--primary);
+  transform: scale(1.1) rotate(4deg);
+}
 
+/* =========================
+   SERVICE TITLE & TEXT
+========================= */
+
+.cardTitle {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.3;
+  margin-bottom: 0.85rem;
+}
+
+.cardDesc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin-bottom: 2rem;
+  flex-grow: 1;
+}
+
+/* =========================
+   CARD BUTTON
+========================= */
+
+.cardLink {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 0.5rem;
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  background: var(--input-bg);
+  border: 1px solid var(--glass-border);
+  padding: 0.75rem 1.4rem;
+  border-radius: 50px;
+  transition: var(--transition-smooth);
+  margin-top: auto;
+}
+
+.cardLink svg {
+  transition: transform 0.25s ease;
+}
+
+.cardLink:hover {
   color: #fff;
+  background: var(--primary);
+  border-color: var(--primary);
+  box-shadow: 0 6px 18px rgba(139, 92, 246, 0.3);
+}
 
-  transform: scale(1.1) rotate(5deg);
-
-  box-shadow:
-    0 0 20px rgba(139, 92, 246, 0.4);
+.cardLink:hover svg {
+  transform: translateX(4px);
 }
 
 /* =========================
@@ -405,210 +197,53 @@
 
 .moreBtnWrapper {
   display: flex;
-
   justify-content: center;
-
   margin-top: 4rem;
 }
 
 .moreBtn {
   font-family: var(--font-outfit), sans-serif;
-
   font-size: 1rem;
   font-weight: 600;
-
-  padding: 0.9rem 2.25rem;
-
+  padding: 0.95rem 2.5rem;
   border-radius: 50px;
-
   background: var(--input-bg);
-
   color: var(--text-primary);
-
   border: 1px solid var(--glass-border);
-
   cursor: pointer;
-
   transition: var(--transition-smooth);
 }
 
 .moreBtn:hover {
   background: var(--primary);
-
   color: #fff;
-
   border-color: var(--primary);
-
-  box-shadow:
-    0 5px 15px rgba(139, 92, 246, 0.35);
-
+  box-shadow: 0 8px 25px rgba(139, 92, 246, 0.35);
   transform: translateY(-2px);
 }
 
 /* =========================================================
-   iPAD / TABLET
-   <= 1024px
-
-   IMPORTANT:
-   Every service becomes:
-
-   IMAGE
-   ↓
-   DESCRIPTION
+   RESPONSIVE BREAKPOINTS
 ========================================================= */
 
 @media (max-width: 1024px) {
   .section {
-    padding: 7rem 1.5rem;
-  }
-
-  .grid {
-    gap: 4rem;
-  }
-
-  .serviceItem {
-    grid-template-columns: 1fr;
-
-    gap: 2.5rem;
-  }
-
-  /*
-     FORCE IMAGE FIRST
-     Even services are also reset.
-  */
-
-  .serviceItem .imageWrapper,
-  .serviceItem:nth-child(even) .imageWrapper {
-    order: 1;
-  }
-
-  .serviceItem .content,
-  .serviceItem:nth-child(even) .content {
-    order: 2;
-  }
-
-  .imageWrapper {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-
-    border-radius: 22px;
-  }
-
-  .content {
-    width: 100%;
-  }
-
-  .cardTitle {
-    font-size: 1.9rem;
-  }
-
-  .cardDesc {
-    max-width: 650px;
-  }
-
-  .card {
-    padding: 2.5rem 2rem;
-  }
-}
-
-/* =========================================================
-   MOBILE
-   <= 768px
-
-   IMAGE
-   ↓
-   DESCRIPTION
-========================================================= */
-
-@media (max-width: 768px) {
-  .section {
     padding: 6rem 1.5rem;
   }
 
-  .header {
-    margin-bottom: 3.5rem;
-  }
-
   .grid {
-    gap: 4rem;
-  }
-
-  .serviceItem {
-    display: grid;
-
-    grid-template-columns: 1fr;
-
-    gap: 2rem;
-  }
-
-  /*
-     FORCE IMAGE FIRST
-     FOR ALL SERVICES
-  */
-
-  .serviceItem .imageWrapper,
-  .serviceItem:nth-child(even) .imageWrapper {
-    order: 1;
-  }
-
-  .serviceItem .content,
-  .serviceItem:nth-child(even) .content {
-    order: 2;
-  }
-
-  .imageWrapper {
-    aspect-ratio: 16 / 10;
-
-    border-radius: 20px;
-  }
-
-  .cardTitle {
-    font-size: 1.5rem;
-
-    margin-bottom: 0.85rem;
-  }
-
-  .cardDesc {
-    font-size: 0.9rem;
-
-    line-height: 1.6;
-
-    margin-bottom: 1.5rem;
-  }
-
-  .serviceList {
-    gap: 0.65rem;
-
-    margin-bottom: 1.5rem;
-  }
-
-  .serviceList li {
-    font-size: 0.85rem;
-  }
-
-  .serviceBadge {
-    font-size: 0.75rem;
-
-    margin-bottom: 0.75rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
   }
 
   .card {
-    padding: 2.25rem 1.5rem;
-  }
-
-  .moreBtnWrapper {
-    margin-top: 3rem;
+    padding: 2.25rem 1.75rem;
   }
 }
 
-/* =========================================================
-   SMALL MOBILE
-   <= 480px
-========================================================= */
-
-@media (max-width: 480px) {
+@media (max-width: 640px) {
   .section {
-    padding: 5rem 1rem;
+    padding: 5rem 1.25rem;
   }
 
   .header {
@@ -616,46 +251,15 @@
   }
 
   .grid {
-    gap: 3.5rem;
-  }
-
-  .serviceItem {
+    grid-template-columns: 1fr;
     gap: 1.5rem;
   }
 
-  .imageWrapper {
-    aspect-ratio: 4 / 3;
-
-    border-radius: 18px;
+  .card {
+    padding: 2rem 1.5rem;
   }
 
   .cardTitle {
-    font-size: 1.4rem;
-  }
-
-  .cardDesc {
-    font-size: 0.88rem;
-
-    line-height: 1.6;
-  }
-
-  .serviceList {
-    gap: 0.6rem;
-  }
-
-  .serviceList li {
-    font-size: 0.82rem;
-
-    align-items: flex-start;
-  }
-
-  .serviceList li svg {
-    margin-top: 3px;
-  }
-
-  .cardLink {
-    font-size: 0.85rem;
-
-    padding: 0.75rem 1.25rem;
+    font-size: 1.35rem;
   }
 }
